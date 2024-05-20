@@ -329,3 +329,29 @@ console.log(invert([0]));
 console.log('15 uzduotis...............');
 // 15 uzduotis
 
+function reverseSq(n) {
+    return Array.from({length: n},(_, i) => n -i );
+}
+  
+console.log(reverseSq(5));
+
+console.log('16 uzduotis.............');
+// 16 uzduotis
+
+/*function getGrade(s1, s2, s3) {
+  let average = s1 + s2 + s3 / 2;
+  
+  if (90 <= average <= 100) {
+    return 'A';
+  } 
+  if (80 <= average < 90) {
+    return 'B';
+  } 
+  If (70 <= average < 80); 
+    return 'C';
+  }
+  if (60 )
+}*/
+//console.log(getGrade(95,90,93));
+//console.log(getGrade(100,85,96));
+//console.log(getGrade(92,93,94));
