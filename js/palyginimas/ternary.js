@@ -53,3 +53,42 @@ console.log(ats2);
    tai grazink pirma simboli, priesingu atveju paskutini
 */
 
+const first = s => s[0];
+const last = s => s.at(-1);
+//const last = s => s[s.length -1];
+
+const text1 = 'Labas';
+const strAts = text1.length < 5 ? first(text1) : last(text1);
+console.log(strAts);
+
+const funcToCall = text1.length < 5 ? first : last;
+const strAts2 = funcToCall(text1);
+console.log(funcToCall);
+console.log(strAts2);
+
+const jonasMarks = [];
+const lauraMarks = [10, 5, 6, 8, 9];
+
+function emptyMarksArray() {
+   return 'Studentas neturi pazymiu,todel negalime isvesti vidurkio';
+}
+function marksAverage(marks) {
+   let sum = 0;
+   for (let i = 0; i < marks.length; i++) {
+      sum += marks[i];
+   }
+   const count = marks.length;
+   const average = sum / count;
+   return average;
+}
+const jonasFunc = jonasMarks.length === 0
+    ? emptyMarksArray
+    : marksAverage;
+const jonasAverage = jonasFunc(jonasMarks);
+console.log(jonasAverage);
+
+const lauraFunc = lauraMarks.length === 0
+    ? emptyMarksArray
+    : marksAverage;
+const lauraAverage = lauraFunc(lauraMarks);
+console.log(lauraAverage);
