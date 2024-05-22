@@ -523,7 +523,6 @@ function sumTwoSmallestNumbers(numbers) {
     sum = numbers[0] + numbers[1]
   }
   return sum;
-
 }
 console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
 console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
@@ -557,9 +556,8 @@ for (let i = 0; i <= l.length; i++) {
   if (typeof l[i] === 'number') {
     arr.push(l[i]);
   } 
-  
 }
-return arr;
+  return arr;
 }
 console.log(filter_list([1,2,'a','b']));
 console.log(filter_list([1,'a','b',0,15]));
@@ -572,7 +570,7 @@ console.log(`\n 28 uzduotis.............`);
 // 28 uzduotis
 
 function removeChar(str) {
-return str.slice(1, -1);
+  return str.slice(1, -1);
 }
 console.log(removeChar('eloquent'));
 console.log(removeChar('country'));
@@ -581,4 +579,30 @@ console.log(removeChar('place'));
 console.log(removeChar('ooopsss'));
 console.log(`\n 29 uzduotis..............`);
 // 29 uzduotis
+
+function greet (name, owner) {
+  const greet = name === owner ? 'Hello boss' : 'Hello guest'
+    return greet;
+}
+console.log(greet('Daniel', 'Daniel'));
+console.log(greet('Greg', 'Daniel'));
+// kitas budas
+/*function greet (name, owner) {
+  return `Hello ${name==owner?'boss':'guest'}`
+}*/
+console.log(`\n 30 uzduotis...................`);
+// 30 uzduotis
+
+function grow(x) {
+  let multy = [];
+  for(let i = 0; i < x.length; i++) {
+    multy = x.reduce((a, b) => a * b);
+  }
+  return multy;
+}
+console.log(grow([1, 2, 3]));
+console.log(grow([4, 1, 1, 1, 4])); 
+console.log(grow([2, 2, 2, 2, 2, 2]));
+console.log(`\n 31 uzduotis..............`);
+// 31 uzduotis
 
