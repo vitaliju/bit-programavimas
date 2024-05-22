@@ -93,7 +93,7 @@ console.log(Math.max(-1, -3));
 console.log(Math.max(-1, -3, 7, 10, 3.14));
 
 console.log('\n Min ----------------');
-//nurodo didziausia skaiciu(nedraugauja su masyvais)
+//nurodo maziausia skaiciu(nedraugauja su masyvais)
 console.log(Math.min(1, 3));
 console.log(Math.min(-1, -3));
 console.log(Math.min(-1, -3, 7, 10, 3.14));
@@ -118,3 +118,23 @@ console.log(Math.random());
 console.log(Math.random());
 console.log(Math.random());
 console.log(0.9999999999999999);
+
+console.log(`\nSign....................`);// grazina 1 arba-1
+console.log(Math.sign(5));
+console.log(Math.sign(-5));
+console.log(Math.sign(2.333));
+console.log(Math.sign(-2.333));
+console.log(Math.sign(0)); // grazina 0 arba -0
+console.log(Math.sign(-0));
+console.log(Math.sign(Infinity));
+console.log(Math.sign(-Infinity));
+console.log(Math.sign(NaN)); // graina NaN
+
+console.log(`\n Sqrt..................`);
+console.log(Math.sqrt(4)); // istraukia sakni
+console.log(Math.sqrt(81));
+console.log(Math.sqrt(9));
+console.log(Math.sqrt(-4), '2i');
+console.log(Math.sqrt(-9), '3i');
+
+// i * i = -1
