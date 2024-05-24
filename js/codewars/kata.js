@@ -1,5 +1,4 @@
 
-// 1.
 console.log(`\n 1 uzduotis..................`);
 
 function getMiddle(string) {
@@ -11,15 +10,12 @@ function getMiddle(string) {
   }
     
 } 
-
-
 console.log(getMiddle("testing"),"t");
 console.log(getMiddle("middle"),"dd");
 console.log(getMiddle("test"),"es");
 console.log(getMiddle("A"),"A");
 
 console.log(`\n 2 uzduotis...............`);
-// 2.
 
 function wordReverse(str) {
   let string = '';
@@ -29,15 +25,12 @@ function wordReverse(str) {
     
     return string;
 }
-
-
 console.log(wordReverse('world'));
 console.log(wordReverse('hello'));
 console.log(wordReverse(''));
 console.log(wordReverse('h'));
 
 console.log(`\n 3 uzduotis...................`);
-// 3.
 
 function digitize(n) {
     
@@ -46,15 +39,12 @@ function digitize(n) {
   for (let i = numb.length - 1; i >=0; i--) {
       size.push(parseInt(numb[i]));
     }
-    
     return size;
 }
-
 console.log(digitize(35231));
 console.log(digitize(0));
 
 // kitas budas
-
 function digitize(n) {
   return Array.from(String(n),Number).reverse();
 }
@@ -63,25 +53,19 @@ console.log(digitize(35231));
 console.log(digitize(0));
 
 console.log(`\n 4 uzduotis..................`);
-// 4 uzduotis
 
 function countPositiveSumNegative(input) {
   let pos = [];
   for (let i = 0; i <= input.length; i++) {
       if (i >= 0) {
         ++ pos;
-    }
-        
-        
+    }     
   }
     return pos;
 }
-
 console.log(countPositiveSumNegative([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
 
 console.log(`\n 5 uzduotis..............`);
-
-// 5. uzduotis
 
 /*function century(year) {
     let age = year + 100;
@@ -149,7 +133,6 @@ console.log(century(81));
 
 console.log(`\n 6 uzduotis................`);
 
-// 6 uzduotis
 function smash(words) {
   let text = words[0];
   
@@ -159,9 +142,7 @@ console.log(smash([]));
 console.log(smash(["hello", "world"]));
 console.log(smash(["hello", "amazing", "world"]));
 console.log(smash(["this", "is", "a", "really", "long", "sentence"]));
-console.log('kitas budas.........');
-
-// kitas budas
+console.log('kitas budas.........')
 
 function smash(words) {
   return words.toString().replaceAll(',', ' ');
@@ -171,8 +152,6 @@ console.log(smash(["hello", "amazing", "world"]));
 console.log(smash(["this", "is", "a", "really", "long", "sentence"]));
 
 console.log(`\n 7 uzduotis.........`);
-
-// 7 uzduotis
 
 function positiveSum(numbers) {
   let sum = 0;
@@ -209,7 +188,6 @@ console.log(findAverage([1,2,3,4]));
 console.log(findAverage([]));
 
 console.log(`\n 9 uzduotis..........`);
-// 9 uzduotis
 
 function evenOrOdd(number) {
   if (number % 2 !== 0) {
@@ -224,7 +202,7 @@ console.log(evenOrOdd(3));
 console.log(evenOrOdd(-2));
 
 console.log(`\n 10 uzduotis.............`);
-// 10 uzduotis
+
 function sum (numbers) {
   let count = 0;
   for (let i = 0; i < numbers.length; i++) {
@@ -237,7 +215,6 @@ console.log(sum([]));
 console.log(sum([1, 5.2, 4, 0, -1]));
 
 console.log(`\n 11 uzduotis...........`);
-// 11 uzduotis
 
 function sumMix(x) {
  
@@ -256,7 +233,6 @@ console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
 console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']));
 
 console.log(`\n 12 uzduotis...........`);
-// 12 uzduotis
 
 function areYouPlayingBanjo(name) {
    if (name.startsWith('R') || name.startsWith('r')) {
@@ -273,7 +249,6 @@ console.log(areYouPlayingBanjo("bravo"));
 console.log(areYouPlayingBanjo("rolf"));
 
 console.log(`\n 13 uzduotis..................`);
-// 13 uzduotis
 
 function stringToNumber(str) {
   return parseFloat(str);
@@ -285,7 +260,6 @@ console.log(stringToNumber("1405"));
 console.log(stringToNumber("-7"));
 
 console.log(`\n 14 uzduotis....................`);
-// 14 uzduotis
 
 function invert(array) {
    for (let i =0; i < array.length; i++) {
@@ -327,7 +301,6 @@ console.log(invert([]));
 console.log(invert([0]));
 
 console.log(`\n 15 uzduotis...............`);
-// 15 uzduotis
 
 function reverseSq(n) {
     return Array.from({length: n},(_, i) => n -i );
@@ -336,49 +309,47 @@ function reverseSq(n) {
 console.log(reverseSq(5));
 
 console.log(`\n 16 uzduotis.............`);
-// 16 uzduotis
 
-/*function getGrade(s1, s2, s3) {
-  let avg = s1 + s2 + s3 / 3;
+function getGrade(s1, s2, s3) {
+  const avg = s1 + s2 + s3;
+  const sum = avg / 3;
       
-  if (90 <= avg <= 100) {
+  if (sum > 90) {
     return 'A';
   } 
-  if (80 <= avg2 < 90) {
+  if (sum >= 80 && sum < 90) {
     return 'B';
   } 
-  if (70 <= avg < 80) {
+  if (sum >= 70 && sum < 80) {
     return 'C'; 
   } 
-  if (60 <= avg < 70) {
+  if (sum >= 60 && sum < 70) {
     return 'D';
   }
-  if (0 <= avg < 60) {
+  if (sum >= 0 && sum < 60) {
     return  'F';
   }
 
-   return avg ;
-}*/
-
-//console.log(getGrade(95,90,93));
-//console.log(getGrade(100,85,96));
-//console.log(getGrade(92,93,94));
-//console.log(getGrade(70,70,100));
-//console.log(getGrade(82,85,87));
-//console.log(getGrade(84,79,85));
-//console.log(getGrade(89,89,90)); 
-//console.log(getGrade(70,70,70));
-//console.log(getGrade(75,70,79));
-//console.log(getGrade(60,82,76));
-//console.log(getGrade(65,70,59));
-//console.log(getGrade(66,62,68));
-//console.log(getGrade(58,62,70));
-//console.log(getGrade(44,55,52));
-//console.log(getGrade(48,55,52));
-//console.log(getGrade(58,59,60));
+   return sum;
+}
+console.log(getGrade(95,90,93));
+console.log(getGrade(100,85,96));
+console.log(getGrade(92,93,94));
+console.log(getGrade(70,70,100));
+console.log(getGrade(82,85,87));
+console.log(getGrade(84,79,85));
+console.log(getGrade(89,89,90)); 
+console.log(getGrade(70,70,70));
+console.log(getGrade(75,70,79));
+console.log(getGrade(60,82,76));
+console.log(getGrade(65,70,59));
+console.log(getGrade(66,62,68));
+console.log(getGrade(58,62,70));
+console.log(getGrade(44,55,52));
+console.log(getGrade(48,55,52));
+console.log(getGrade(58,59,60));
 
 console.log(`\n 17 uzduotis...............`);
-// 17 uzduotis
 
 function past(h, m, s) {
   const a = h * 60 * 60 *1000;
@@ -398,7 +369,6 @@ console.log(past(1,0,0));
 }*/
 
 console.log(`\n 18 uzduotis.............`);
-// 18 uzduotis
 
 function numberToString(num) {
   return num.toString();
@@ -411,7 +381,7 @@ function numberToString(num) {
 console.log(numberToString(656));
 
 console.log(`\n 19 uzduotis.............`);
-// 19 uzduotis
+
 
 function disemvowel(str) {
   let newStr = (str.replace(/A|E|I|O|U|a|e|i|o|u/g, ''));
@@ -423,7 +393,7 @@ console.log(disemvowel("No offense but,\nYour writing is among the worst I've ev
 console.log(disemvowel("What are you, a communist?"));
 
 console.log(`\n 20 uzduotis..................`);
-// 20 uzduotis
+
 function lovefunc(flower1, flower2) {
   
   if (flower1 % 2 === 0 && flower2 % 2 !== 0) {
@@ -448,8 +418,8 @@ console.log(lovefunc(3,4));
 console.log(lovefunc(2,2));
 console.log(lovefunc(0,5));
 console.log(lovefunc(0,0));
- console.log(`\n 21 uzduotis................`);
- // 21 uzduotis
+
+console.log(`\n 21 uzduotis................`);
  
  function makeUpperCase(str) {
     return str.toUpperCase();
@@ -467,12 +437,11 @@ console.log(makeUpperCase2("hellO"));
 console.log(makeUpperCase2("HELLO"));
 
 console.log(`\n 22 uzduotis..............`);
-// 22 uzduotis
 
 function feast(beast, dish) {
-   const b = beast[0] + beast.at(-1);
-   const d = dish[0] + dish.at(-1);
-      return b === d ? true : false;
+  const b = beast[0] + beast.at(-1);
+  const d = dish[0] + dish.at(-1);
+    return b === d ? true : false;
 }
 console.log(feast("great blue heron", "garlic naan"));
 console.log(feast("chickadee", "chocolate cake"));
@@ -486,8 +455,8 @@ function feast2(beast, dish) {
 console.log(feast("great blue heron", "garlic naan"));
 console.log(feast("chickadee", "chocolate cake"));
 console.log(feast("brown bear", "bear claw"));
+
 console.log(`\n 23 uzduotis...............`);
-// 23 uzduotis
 
 function countSheep(num) {
   let sum = '';
@@ -500,8 +469,8 @@ console.log(countSheep(0));
 console.log(countSheep(1));
 console.log(countSheep(2));
 console.log(countSheep(3));
+
 console.log(`\n 24 uzduotis...............`);
-// 22 uzduotis
 
 function booleanToString(b) {
   if (b === true) {
@@ -512,8 +481,8 @@ function booleanToString(b) {
 }
 console.log(booleanToString(true));
 console.log(booleanToString(false));
+
 console.log(`\n 25 uzduotis................`);
-// 25uzduotis
 
 function sumTwoSmallestNumbers(numbers) {
    
@@ -536,7 +505,6 @@ console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]));
 }*/
 
 console.log(`\n 26 uzduotis......................`);
-// 26 uzduotis
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   if (distanceToPump / fuelLeft <= mpg) {
@@ -547,8 +515,8 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 };
 console.log(zeroFuel(50, 25, 2));
 console.log(zeroFuel(100, 50, 1));
+
 console.log(`\n 27 uzduotis..............`);
-// 27 uzduotis
 
 function filter_list(l) {
   let arr = [];
@@ -566,8 +534,8 @@ console.log(filter_list([1,2,'aasf','1','123',123]));
 /*function filter_list(l) {
   return l.filter(x => typeof(x) =="number");
 }*/
+
 console.log(`\n 28 uzduotis.............`);
-// 28 uzduotis
 
 function removeChar(str) {
   return str.slice(1, -1);
@@ -577,8 +545,8 @@ console.log(removeChar('country'));
 console.log(removeChar('person'));
 console.log(removeChar('place'));
 console.log(removeChar('ooopsss'));
+
 console.log(`\n 29 uzduotis..............`);
-// 29 uzduotis
 
 function greet (name, owner) {
   const greet = name === owner ? 'Hello boss' : 'Hello guest'
@@ -590,8 +558,8 @@ console.log(greet('Greg', 'Daniel'));
 /*function greet (name, owner) {
   return `Hello ${name==owner?'boss':'guest'}`
 }*/
+
 console.log(`\n 30 uzduotis...................`);
-// 30 uzduotis
 
 function grow(x) {
   let multy = [];
@@ -603,6 +571,185 @@ function grow(x) {
 console.log(grow([1, 2, 3]));
 console.log(grow([4, 1, 1, 1, 4])); 
 console.log(grow([2, 2, 2, 2, 2, 2]));
-console.log(`\n 31 uzduotis..............`);
-// 31 uzduotis
 
+console.log(`\n 31 uzduotis..............`);
+
+/*function dnaStrand(dna){
+  return dna.replace('A', 'T').replace('A', 'T').replace('A', 'T').replace('A', 'T').
+             replace('C', 'G').replace('G','C'); 
+              
+}             
+console.log(dnaStrand("AAAA"), 'TTTT');
+console.log(dnaStrand("ATTGC"),'TAACG');
+console.log(dnaStrand("GTAT"), 'CATA');*/
+
+console.log(`\n 32 uzduotis....................`)
+
+//https://www.codewars.com/kata/57f24e6a18e9fad8eb000296/train/javascript
+
+/*function howMuchILoveYou(nbPetals) {
+  if (nbPetals === 1) {
+    return 'I love you';
+  }
+  if ( nbPetals === 2) {
+    return 'a litlle';
+  }
+  if (nbPetals === 3) {
+    return 'a lot';
+  } 
+  if (nbPetals === 4) {
+    return 'passionately';
+  }
+  if (nbPetals === 5) {
+    return 'madly';
+  }
+  if (nbPetals === 6) {
+    return 'not at all';
+  }
+}
+console.log(howMuchILoveYou(7));
+console.log(howMuchILoveYou(3));
+console.log(howMuchILoveYou(6));*/
+
+console.log(`\n 33 uzduotis..........................`);
+
+function countBy(x, n) {
+  let z = [];
+for (let i = 1; i <= n; i ++) {
+  z.push(x * i);
+}
+  return z;
+}
+console.log(countBy(1, 5));
+console.log(countBy(2, 8));
+
+console.log(`\n 34 uzdv................`);
+
+function persistence(num) {
+  const newNum = num.toString();
+  if (newNum.length === 1) {
+    return 0;
+  }
+  const nextNum = newNum.split('').reduce((a, b) => a * b, 1);
+    return 1 + persistence(nextNum);
+}
+console.log(persistence(39));
+console.log(persistence(4));
+console.log(persistence(25));
+console.log(persistence(999));
+
+console.log(`\n 35 uzdv.............`);
+
+function findShort(s) {
+  const strArr = s.trim().split(' ');
+  const newStr = strArr.sort((a, b) => {return a.length - b.length});
+  return newStr[0].length;
+}
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+console.log(findShort("turns out random test cases are easier than writing out basic ones")); 
+console.log(findShort("Let's travel abroad shall we"));
+
+console.log(`\n 36 uzdv........................`);
+
+function highAndLow(numbers) {
+  const newNum = numbers.split(' ');
+  const highLow = newNum.sort(function(a, b) {
+    return Number(a) - Number(b);
+  });
+  return highLow[highLow.length - 1] + ' ' + highLow[0];
+}
+console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+console.log(highAndLow("1 2 3"));
+
+console.log(`\n 37 uzdv......................`);
+
+function rentalCarCost(d) {
+  const day = d;
+  const price = 40;
+  let rent = day * price;
+  
+  if (d < 3) {
+    return rent;
+  }
+  if ( d >= 3 && d < 7) {
+    return rent - 20;
+  }
+  if (d >= 7) {
+    return rent - 50
+  }
+
+}
+// kitas budas
+//const rentalCarCost = d => d * 40 - ((d > 6) ? 50 : ((d > 2) ? 20 : 0));
+console.log(rentalCarCost(1));
+console.log(rentalCarCost(2));
+console.log(rentalCarCost(4));
+console.log(rentalCarCost(7));
+
+console.log(`\n 38 uzdv...........`);
+
+/* Expanted number (12) --> '10 + 2'
+                  (213) --> '200 + 10  + 3'
+*/
+function expandedForm(num) {
+  let str = num.toString().split('');
+  for (let i = 0; i < str.length; i++) {
+      for (let j = str.length - i; j > 1; j--) {
+        if (str[i] === '0') {
+          i++
+        } else {
+          str[i] += '0';
+        }
+        
+      }
+    
+  }
+  str = str.filter(item => item !== '0');
+  return str.join('+');
+} 
+console.log(expandedForm(12));
+console.log(expandedForm(42));
+console.log(expandedForm(70304));
+
+console.log(`\n 39 uzdv...............`);
+
+function removeEveryOther(arr){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
+// kitas budas
+/*function removeEveryOther(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    arr.splice(i, 1);
+  }
+  return arr
+}
+*/
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']))
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+console.log(removeEveryOther([[1, 2]]))
+console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));
+
+console.log(`\n 40 uzdv..............`);
+
+function abbrevName(name){
+  const letter = name.split(' ');
+  const inicials = letter[0].charAt(0) + '.' + letter[1].charAt(0) + '.';
+
+  return inicials.toUpperCase();
+}
+// kitas budas
+/*function abbrevName(name) {
+
+  const nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase(); 
+}*/  
+console.log(abbrevName("Sam Harris"));
+console.log(abbrevName("Patrick Feenan"));
+console.log(abbrevName("Evan Cole"));
+console.log(abbrevName("ethan dole"));
+
+console.log(`\n 41 uzdv..............`);
