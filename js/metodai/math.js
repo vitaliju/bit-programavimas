@@ -104,7 +104,8 @@ console.log(Math.min(marks), ':(');
 console.log('\n Pow ----------------');
 //skaiciu pakelia nurodytu laipsniu
 console.log(Math.pow(2, 3));
-console.log(Math.pow(2, 5));
+console.log(Math.pow(5, 2));
+console.log(Math.pow(2, 2));
 console.log(2 ** 3);
 console.log(2 ** 5);
 

@@ -147,7 +147,7 @@ console.log('.............');
 // split => (ne)buvo kur kirpti
 
 console.log('..................');
- console.log('toLowerCase()');  // Keicia simbolius ididziasias ir mazasias raides
+ console.log('toLowerCase()');  // Keicia simbolius i didziasias ir mazasias raides
 console.log('Pomidoras'.toUpperCase(''));
 console.log('Pomidoras'.toLowerCase(''));
 
