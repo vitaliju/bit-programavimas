@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "for-other": "node --watch ./js/ciklai/for-other.js",
     "clock": "node --watch ./js/ciklai/clock.js",
     "matrix": "node --watch ./js/ciklai/matrix.js",
     "workshop": "node --watch ./js/codewars/workshop.js",
@@ -20,6 +21,7 @@
     "testai": "node --watch ./js/ciklai/testai.js",
     "for": "node --watch ./js/ciklai/for.js",
     "array": "node --watch ./js/duomenys/array.js",
+    "switch": "node --watch ./js/palyginimas/switch.js",
     "ternary": "node --watch ./js/palyginimas/ternary.js",
     "if": "node --watch ./js/palyginimas/if.js",
     "arrow": "node --watch ./js/funkcijos/arrow.js",
