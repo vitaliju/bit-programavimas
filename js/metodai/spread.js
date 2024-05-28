@@ -39,7 +39,7 @@ console.log(e, f);
 const g = [0, ...e, 4, 5];
 console.log(g);
 
-const h = [...e, ...e, ...e, 888];
+const h = [...e, ...e, 888];
 console.log(h);
 
 // ...spread object

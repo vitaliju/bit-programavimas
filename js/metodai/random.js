@@ -42,5 +42,5 @@ console.log(`\n.................`);
 // ND: Man reikia atsitiktinio skaiciaus intervale [23..617) imtinai
 
 for (let i = 0; i < 10; i++) {
-    console.log(Math.floor(Math.random() * 594 + 23));
+    console.log(Math.floor(Math.random() * (617 - 23 + 1) +23));
 }

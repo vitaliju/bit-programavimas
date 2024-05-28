@@ -574,11 +574,22 @@ console.log(grow([2, 2, 2, 2, 2, 2]));
 
 console.log(`\n 31 uzduotis..............`);
 
-/*function dnaStrand(dna){
-  return dna.replace('A', 'T').replace('A', 'T').replace('A', 'T').replace('A', 'T').
-             replace('C', 'G').replace('G','C'); 
-              
-}             
+/*function dnaStrand(dna) {
+  const rep = dna.split(' ');
+  let newDna = [];
+  for (let i = 0; i < rep.length; i++) {
+    if(rep[i].includes('A')) {
+      newDna.push(rep[i].replace('A', 'T'));
+    } else if (rep[i].includes('G')) {
+      newDna.push(rep[i].replace('G', 'C'));
+    } else if (rep[i].includes('C')) {
+      newDna.push(rep[i].replace('C','G'));
+    }
+    
+  }
+  return newDna;
+}
+             
 console.log(dnaStrand("AAAA"), 'TTTT');
 console.log(dnaStrand("ATTGC"),'TAACG');
 console.log(dnaStrand("GTAT"), 'CATA');*/
@@ -753,3 +764,179 @@ console.log(abbrevName("Evan Cole"));
 console.log(abbrevName("ethan dole"));
 
 console.log(`\n 41 uzdv..............`);
+
+function getAge(inputString){
+  const age = inputString;
+ for (let i = 0; i < inputString.length; i++) {
+    return parseFloat(age[i]);
+ }
+ 
+}
+console.log(getAge("4 years old"));
+console.log(getAge("6 years old"));
+
+console.log(`\n 42 uzdv................`);
+
+function validatePIN (pin) {
+  const digits = pin.length;
+  if ((digits === 4 || digits === 6) 
+                  && (!isNaN(pin) && !pin.includes('.') 
+                  && !pin.includes('-') && !pin.includes(' '))) {
+    return true;
+  } else {
+    return false;
+  }
+  
+}
+console.log(validatePIN("1"));
+console.log(validatePIN("12"));
+console.log(validatePIN("123"));
+console.log(validatePIN("12345"));
+console.log(validatePIN("1234567"));
+console.log(validatePIN("-1234"));
+console.log(validatePIN("1.234"));
+console.log(validatePIN("-1.234"));
+console.log(validatePIN("00000000"));
+console.log(validatePIN("a234"));
+console.log(validatePIN(".234"));
+console.log(validatePIN("5234"));
+console.log(validatePIN("589234"));
+console.log(validatePIN("-89234"));
+console.log(validatePIN("1234  "));
+
+console.log(`\n 43 uzdv..............`);
+
+function oddOrEven(array) {
+  let sum = 0;
+  const sumArr = array.reduce((a, b) => a + b, sum);
+   if (array.length === 0 || sumArr % 2 === 0 || sumArr === 0) {
+    return 'even';
+   } else {
+    return 'odd';
+   }
+  
+  }
+console.log(oddOrEven([0]));
+console.log(oddOrEven([1]));
+console.log(oddOrEven([]));
+console.log(oddOrEven([0, 1, 5]));
+console.log(oddOrEven([0, 1, 3]));
+console.log(oddOrEven([1023, 1, 2]));
+console.log(oddOrEven([1023, 1, 3]));
+
+console.log(`\n 44 uzdv.............`);
+
+function hero(bullets, dragons) {
+  const hero = bullets / 2 >= dragons ? true : false;
+  return hero;
+}
+console.log(hero(10, 5));
+console.log(hero(7, 4));
+console.log(hero(4, 5));
+console.log(hero(100, 40));
+console.log(hero(1500, 751));
+console.log(hero(0, 1));
+
+console.log(`\n 45 uzdv...............`);
+
+function arrayDiff(a, b) {
+  if (a.length === 0) {
+    return [];
+  }
+  if (b.length === 0) {
+    return a;
+  }
+  let arr = [];
+  a.forEach(function included(item) {
+    if (!b.includes(item)) {
+      arr.push(item)
+    }
+  })
+  return arr;
+}
+console.log(arrayDiff([1,2], [1]))
+console.log(arrayDiff([1,2,2], [1]))
+console.log(arrayDiff([1,2,2], [2]))
+console.log(arrayDiff([1,2,2], []))
+console.log(arrayDiff([], [1,2]))
+console.log(arrayDiff([1,2,3], [1,2]));
+
+console.log(`\n 46 uzdv.............`);
+
+//www.codewars.com/kata/585d7d5adb20cf33cb000235/train/javascript
+
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  if (arr[0] === arr[1]) {
+    return arr.pop();
+  } else {
+    return arr[0];
+  }
+}
+console.log(findUniq([ 1, 0, 0 ]));
+console.log(findUniq([ 0, 1, 0 ]));
+console.log(findUniq([ 0, 0, 1 ]));
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+console.log(findUniq([ 1, 1, 2, 1, 1 ]));
+console.log(findUniq([ 3, 10, 3, 3, 3 ]));
+
+console.log(`\n 47 uzdv...................`);
+
+function reverseWords(str) {
+  const text = str.split(' ');
+  let rev = [];
+  for ( i = 0; i < text.length; i++) {
+    rev.push(text[i].split('').reverse().join(''));
+  }  
+  return rev.join(' ');
+}
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+console.log(reverseWords('apple'));
+console.log(reverseWords('a b c d'));
+console.log(reverseWords('double  spaced  words'));
+console.log(`\n 48 uzdv...............`);
+
+function  isSquare(n){
+  if (Math.sqrt(n) !== false && n >= 0 && Math.sqrt(n) % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isSquare(-1), false, "-1: Negative numbers cannot be square numbers");
+console.log(isSquare( 0), true, "0 is a square number (0 * 0)");
+console.log(isSquare( 3), false, "3 is not a square number");
+console.log(isSquare( 4), true, "4 is a square number (2 * 2)");
+console.log(isSquare(25));
+console.log(`\n 49 uzdv................`);
+
+function findOdd(arr) {
+  const count = arr.find((item) => arr.filter(x => x === item).length % 2 );
+  return count;
+}
+console.log(findOdd([7]));
+console.log(findOdd([0]));
+console.log(findOdd([7, 1, 2, 1, 1, 7, 2]));
+console.log(findOdd([-1, 1, 2, 2, 2, -1 , 1]));
+console.log(`\n 50 uzdv.....................`);
+
+function getCount(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].includes('a')) {
+      count++;
+    } else if (str[i].includes('e')) {
+      count++;
+    } else if (str[i].includes('i')) {
+      count++
+    } else if (str[i].includes('o')) {
+      count++;
+    } else if (str[i].includes('u')) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(getCount('abrakadabra'));
+console.log(getCount('replace'));
+console.log(getCount('strangegoal'));

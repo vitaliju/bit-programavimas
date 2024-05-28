@@ -31,7 +31,7 @@ const g = 'pomidoras'[gIndex];
 console.log(g); 
 
 /* Jeigu skaicius yra teigiamas, tai ji sumuojame su savimi
-   Jeigu neigiamas, tai daudiname is 10
+   Jeigu neigiamas, tai dauginame is 10
 */
 
 const sum = (a, b) => a + b;
