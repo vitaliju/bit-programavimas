@@ -258,3 +258,143 @@ console.log(contamination("_3ebzgh4", "&"));
 console.log(contamination("//case", " "));
 console.log(`\n 63 uzdv...............`);
 
+function sc(floor){
+  const n = floor - 1;
+  if (floor >= 10) {
+    return 'Aa~ '.repeat(n) + 'Pa!';
+  } else if (floor < 10 && floor >=7) {
+    return "Aa~ ".repeat(n) + "Pa!";
+  } else if (floor >= 6) {
+    return "Aa~ Aa~ Aa~ Aa~ Aa~ Pa! Aa!";
+  } else if (floor <= 1) {
+    return " ";
+  } else if (floor >= 2) {
+    return "Aa~ ".repeat(n) + "Pa! Aa!";
+  }
+}
+console.log(sc(2));  
+console.log(sc(6)); 
+console.log(sc(7)); 
+console.log(sc(10)); 
+console.log(sc(1)); 
+console.log(sc(-1));
+console.log(sc(24));
+console.log(`\n 64 uzdv..........`);
+
+function giveMeFive(obj) {
+  let arr = [];
+  for (const key in obj) {
+    if (key.length === 5) {
+      arr.push(key);
+    }
+    if (obj[key].length === 5) {
+      arr.push(obj[key]);
+    }
+  }
+  return arr;
+}
+console.log(giveMeFive({Our:"earth",is:"a",beautyful:"world"}));
+console.log(giveMeFive({Ihave:"enough", money:"to",buy:"a",car:"model"}));
+console.log(giveMeFive({ Pears: "than", apple: "sweet" }));
+console.log(`\n 65 uzdv...............`);
+
+function pickIt(arr){
+  let odd= [];
+  let even= [];
+  for (const i in arr) {
+    if (arr[i] % 2 !== 0) {
+      odd.push(arr[i]);
+    }
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    }
+  }
+  
+  
+  return [odd,even];
+}
+console.log(pickIt([1,2]));
+console.log(pickIt([1,2,3]));
+console.log(pickIt([3,2,1]));
+console.log(pickIt([10,20,30]));
+console.log(pickIt([11,21,31]));
+console.log(pickIt([8, 1, 5, 4, 6, 1, 1]));
+console.log(`\n 66 uzdv.............`);
+
+function padIt(str, n) {
+  let answer = str;
+  let i = 0;
+  while (i < n) {
+    if (n % 2 === 0) {
+      answer = answer + '*';
+    } else {
+      answer = '*' + answer;
+    }
+    n--;
+  }
+  return answer;
+}
+console.log(padIt("a",1));
+console.log(padIt("a",2));
+console.log(padIt("a",3));
+console.log(padIt("a",4));
+console.log(padIt("a", 5));
+console.log(`\n 67 uzdv..............`);
+
+/*function grabDoll(dolls){
+  let bag=[];
+  for (let i = 0; i < dolls.length; i++) {
+     
+    if (bag.length === 3) {
+      break;
+    }
+    if (dolls[i] !== 'Hello Kitty' || dolls[i] !== 'Barbie doll') {
+      continue;
+      
+    } else {
+      bag.push(dolls[i]);
+    }
+  }
+  
+  return bag;
+}*/
+// kitas budas
+
+const grabDoll = dolls =>                         
+  dolls.filter(i => i == 'Hello Kitty' || i == 'Barbie doll').slice(0, 3);
+console.log(["Mickey Mouse","Hello Kitty","Snow white"]);
+console.log(["Mickey Mouse","Hello Kitty","Hello Kitty","Snow white"]);
+console.log(["Mickey Mouse","Hello Kitty","Hello Kitty","Barbie doll","Snow white"]);
+console.log(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty", "Hello Kitty", "Snow white"]);
+console.log(`\n.68 uzdv..............`);
+
+function howManySmaller(arr,n){
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].toFixed(2) < n) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(howManySmaller([1.234,1.235,1.228],1.24));
+console.log(howManySmaller([1.1888,1.1868,1.1838],1.19));
+console.log(howManySmaller([3.1288, 3.1212, 3.1205], 3.1212));
+console.log(`\n 69 uzdv..............`);
+
+function cutIt(arr){
+  let short = '';
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > short) {
+      short = arr[i].length;
+      newArr.push(arr[i].slice(0, short));
+    }
+  }
+  
+   
+  return newArr;
+}
+console.log(cutIt(["ab","cde","fgh"]));
+console.log(cutIt(["abc","defgh","ijklmn"]));
+console.log(cutIt(["codewars","javascript","java"]));

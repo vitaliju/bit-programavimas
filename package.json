@@ -15,6 +15,7 @@
     "spread": "node --watch ./js/metodai/spread.js",
     "random": "node --watch ./js/metodai/random.js",
     "math": "node --watch ./js/metodai/math.js",
+    "newMethods": "node --watch ./js/metodai/newMethods.js",
     "methodArray": "node --watch ./js/metodai/methodArray.js",
     "methodString": "node --watch ./js/metodai/methodString.js",
     "methodNumbers": "node --watch ./js/metodai/methodNumbers.js",
