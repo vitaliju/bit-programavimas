@@ -362,7 +362,8 @@ console.log(`\n 67 uzdv..............`);
 
 const grabDoll = dolls =>                         
   dolls.filter(i => i == 'Hello Kitty' || i == 'Barbie doll').slice(0, 3);
-console.log(["Mickey Mouse","Hello Kitty","Snow white"]);
+
+console.log(["Mickey Mouse", "Hello Kitty", "Snow white"]);
 console.log(["Mickey Mouse","Hello Kitty","Hello Kitty","Snow white"]);
 console.log(["Mickey Mouse","Hello Kitty","Hello Kitty","Barbie doll","Snow white"]);
 console.log(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty", "Hello Kitty", "Snow white"]);
@@ -382,19 +383,101 @@ console.log(howManySmaller([1.1888,1.1868,1.1838],1.19));
 console.log(howManySmaller([3.1288, 3.1212, 3.1205], 3.1212));
 console.log(`\n 69 uzdv..............`);
 
+// https://www.codewars.com/kata/57274562c8dcebe77e001012
 function cutIt(arr){
-  let short = '';
+  let shortest = '';
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > short) {
-      short = arr[i].length;
-      newArr.push(arr[i].slice(0, short));
+    let str = arr[i];
+    if (str.length < shortest.length || shortest.length === 0) {
+      shortest = str;
     }
   }
-  
+  for (let j = 0; j < arr.length; j++) {
+    let str2 = arr[j];
+    newArr.push(str2.slice(0, shortest.length));
+  }
    
   return newArr;
 }
+
+// kitas budas
+/*function cutIt(arr){
+  let min = Math.min(...arr.map(x => x.length))
+  return arr.map(x => x.slice(0, min))
+  
+}*/
+
 console.log(cutIt(["ab","cde","fgh"]));
 console.log(cutIt(["abc","defgh","ijklmn"]));
-console.log(cutIt(["codewars","javascript","java"]));
+console.log(cutIt(["codewars", "javascript", "java"]));
+console.log(`\n 70 uzdv...............`);
+
+// https://www.codewars.com/kata/57277a31e5e51450a4000010/train/javascript
+
+function firstToLast(str, c) {
+  if (str.includes(c)) {
+    return str.lastIndexOf(c) - str.indexOf(c);
+  } else {
+    return -1;
+  }
+}
+console.log(firstToLast("ababc","a"));
+console.log(firstToLast("ababc","c"));
+console.log(firstToLast("ababc", "d"));
+console.log(`\n 71 uzdv.................`);
+
+// https://www.codewars.com/kata/5729b103dd8bac11a900119e/train/javascript
+
+function fiveLine(s) {
+  const str = s.trim();
+  return `${str}\n${str}${str} \n${str}${str}${str}\n${str}${str}${str}${str}\n${str}${str}${str}${str}${str}`;
+}
+console.log(fiveLine("  a"));
+console.log(fiveLine("\txy \n"));
+console.log(fiveLine("           Ok               "));
+console.log(`\n 72 uzdv................`);
+
+//https://www.codewars.com/kata/5732b0351eb838d03300101d/train/javascript 
+function blackAndWhite(arr) {
+  if (!Array.isArray(arr)) {
+    return "It's a fake array";
+  }
+  if (arr.includes(5) && arr.includes(13)) {
+    return "It's a black array";
+  } else if(!(arr.includes(5) && arr.includes(13))) {
+    return "It's a white array";
+  }
+}
+console.log(blackAndWhite(5,13));
+console.log(blackAndWhite([5,13]));
+console.log(blackAndWhite([5, 12]));
+console.log(`\n 73 uzdv............`);
+
+function animal(obj) {
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+}
+console.log(animal({name:"dog",legs:4,color:"white"}));
+console.log(animal({name:"cock",legs:2,color:"red"}));
+console.log(animal({ name: "rabbit", legs: 4, color: "gray" }));
+console.log(`\n 74 uzdv..............`);
+
+// https://www.codewars.com/kata/5728203b7fc662a4c4000ef3/train/javascript
+/*function alienLanguage(str) {
+  const text = str.split(' ').map(s => s.slice(0, -1).toUpperCase() + s.slice(-1).toLowerCase()).join(' ');
+  return text;
+}*/
+// kitas budas
+function alienLanguage(str) {
+  const text = str.split(' ');
+  for (let i = 0; i < text.length; i++) {
+    text[i] = text[i].slice(0, -1).toUpperCase() + text[i].slice(-1).toLowerCase();
+
+  }
+  return text.join(' ');
+}
+console.log(alienLanguage("My name is John"));
+console.log(alienLanguage("this is an example"));
+console.log(alienLanguage("Hello World"));
+console.log(alienLanguage("HELLO WORLD"));
+console.log(`\n 75 uzdv..............`);
