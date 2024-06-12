@@ -599,24 +599,13 @@ console.log(`\n 32 uzduotis....................`)
 //https://www.codewars.com/kata/57f24e6a18e9fad8eb000296/train/javascript
 
 /*function howMuchILoveYou(nbPetals) {
-  if (nbPetals === 1) {
-    return 'I love you';
-  }
-  if ( nbPetals === 2) {
-    return 'a litlle';
-  }
-  if (nbPetals === 3) {
-    return 'a lot';
+  const text = ['I love you', 'a litlle', 'a lot','passionately', 'madly', 'not at all'];
+  let circle = nbPetals;
+  for (let i = 0; i < text.length; i++) {
+    if (i === (circle - 1) % text.length) {
+      return text[i].name;
+    }
   } 
-  if (nbPetals === 4) {
-    return 'passionately';
-  }
-  if (nbPetals === 5) {
-    return 'madly';
-  }
-  if (nbPetals === 6) {
-    return 'not at all';
-  }
 }
 console.log(howMuchILoveYou(7));
 console.log(howMuchILoveYou(3));

@@ -481,3 +481,106 @@ console.log(alienLanguage("this is an example"));
 console.log(alienLanguage("Hello World"));
 console.log(alienLanguage("HELLO WORLD"));
 console.log(`\n 75 uzdv..............`);
+
+// https://www.codewars.com/kata/577a6e90d48e51c55e000217/train/javascript
+function hotpo(n) {
+  let count = 0;
+  if (n < 2) {
+    return 0;
+  }
+  while (n > 1) {
+    if (n % 2 !== 0) {
+      n = 3 * n + 1;
+    } else {
+      n /= 2;
+    }
+    count++;
+  }
+  return count;
+}
+console.log(hotpo(1), 0);
+console.log(hotpo(5), 5);
+console.log(hotpo(6), 8);
+console.log(hotpo(23), 15);
+console.log(`\n 76 uzdv.................`);
+
+// https://www.codewars.com/kata/582e0e592029ea10530009ce/train/javascript
+/*function duckDuckGoose(players, goose) {
+  return players[(goose - 1) % players.length].name;
+}*/
+// kitas budas
+/*function duckDuckGoose(players, goose) {
+  for (let i = 0; i < players.length; i++) {
+    if (i === (goose-1) % players.length) {
+      return players[i].name;
+    }
+  }
+}
+console.log(duckDuckGoose(players, 1),  "a");
+console.log(duckDuckGoose(players, 3),  "c");
+console.log(duckDuckGoose(players, 10), "z");
+console.log(duckDuckGoose(players, 20), "z");
+console.log(duckDuckGoose(players, 30), "z");
+console.log(duckDuckGoose(players, 18), "g");
+console.log(duckDuckGoose(players, 28), "g");
+console.log(duckDuckGoose(players, 12), "b");
+console.log(duckDuckGoose(players, 2),  "b");
+console.log(duckDuckGoose(players, 7), "f");*/
+console.log(`\n 77 uzdv...........`);
+
+// https://www.codewars.com/kata/5a1ee4dfffe75f0fcb000145/train/javascript
+function bingo(a) {
+  let count = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === 2) {
+      count++;
+    } else if (a[i] === 7) {
+      count++;
+    } else if (a[i] === 9) {
+      count++;
+    } else if (a[i] === 14) {
+      count++;
+    } else if (a[i] === 15) {
+      count++;
+    }
+  }
+   return count >= 5 ? 'WIN' : 'LOSE';
+}
+//kitas budas
+
+/*function bingo(a) {
+  let arr = [2,7,9,14,15]
+  for (let i= 0; i < arr.length; i++){
+    if(!a.includes(arr[i])) { 
+      return 'LOSE'
+  }
+}
+  return 'WIN'
+}*/
+console.log( bingo([1,2,3,4,5,6,7,8,9,10]), "LOSE");
+console.log(bingo([21, 13, 2, 7, 5, 14, 7, 15, 9, 10]), "WIN");
+console.log(`\n 78 uzdv..............`);
+
+// https://www.codewars.com/kata/56efc695740d30f963000557/train/javascript
+String.prototype.toAlternatingCase = function () {
+  let str = '';
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] === this[i].toLowerCase()) {
+      str += this[i].toUpperCase();
+    } else {
+      str += this[i].toLowerCase();
+    }
+  }
+  return str;
+}
+console.log("hello world".toAlternatingCase());
+console.log("HELLO WORLD".toAlternatingCase());
+console.log("hello WORLD".toAlternatingCase());
+console.log("HeLLo WoRLD".toAlternatingCase());
+console.log("12345".toAlternatingCase());
+console.log("1a2b3c4d5e".toAlternatingCase());
+console.log("String.prototype.toAlternatingCase".toAlternatingCase());
+console.log("Hello World".toAlternatingCase().toAlternatingCase());
+console.log(`\n 79 uzdv..............`);
+
+//
