@@ -598,18 +598,16 @@ console.log(`\n 32 uzduotis....................`)
 
 //https://www.codewars.com/kata/57f24e6a18e9fad8eb000296/train/javascript
 
-/*function howMuchILoveYou(nbPetals) {
-  const text = ['I love you', 'a litlle', 'a lot','passionately', 'madly', 'not at all'];
-  let circle = nbPetals;
-  for (let i = 0; i < text.length; i++) {
-    if (i === (circle - 1) % text.length) {
-      return text[i].name;
-    }
-  } 
+function howMuchILoveYou(nbPetals) {
+  let text = ['I love you', 'a little', 'a lot','passionately', 'madly', 'not at all'];
+  for (let i = 0; i < nbPetals; i++) {
+     text.push(text[i]);
+  }
+  return text[nbPetals -1];
 }
 console.log(howMuchILoveYou(7));
 console.log(howMuchILoveYou(3));
-console.log(howMuchILoveYou(6));*/
+console.log(howMuchILoveYou(6));
 
 console.log(`\n 33 uzduotis..........................`);
 

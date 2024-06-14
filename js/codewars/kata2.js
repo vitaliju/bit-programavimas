@@ -583,4 +583,39 @@ console.log("String.prototype.toAlternatingCase".toAlternatingCase());
 console.log("Hello World".toAlternatingCase().toAlternatingCase());
 console.log(`\n 79 uzdv..............`);
 
-//
+// https://www.codewars.com/kata/5601409514fc93442500010b/train/javascript
+function betterThanAverage(classPoints, yourPoints) {
+  let marks = 0; 
+  let classAvg = 0;
+  for (let i = 0; i < classPoints.length; i++) {
+    marks += classPoints[i];
+    classAvg = marks / classPoints.length ;
+  }
+  return yourPoints > classAvg ? true : false;
+}
+console.log(betterThanAverage([2, 3], 5), true);
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
+console.log(`\n 80 uzdv................`);
+
+// https://www.codewars.com/kata/56598d8076ee7a0759000087/train/javascript
+
+function calculateTip(amount, rating) {
+  let rate = rating.toLowerCase();
+  if (rate === "excellent") {
+    return Math.ceil(amount * 20 / 100);
+  } else if (rate === 'great') {
+    return Math.ceil(amount * 15 / 100);
+  } else if (rate === 'good') {
+    return Math.ceil(amount * 10 / 100);
+  } else if (rate === 'poor') {
+    return Math.ceil(amount * 5 / 100);
+  } else if (rate === 'terrible') {
+    return Math.ceil(amount * 0);
+  } 
+    return 'Rating not recognised';    
+}
+console.log(calculateTip(20, "Excellent"), 4);
+console.log(calculateTip(26.95, "good"), 3);
+console.log('........................');
