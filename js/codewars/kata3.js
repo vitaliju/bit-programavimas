@@ -55,4 +55,97 @@ console.log(findMultiples(4, 27), [4, 8, 12, 16, 20, 24]);
 console.log(findMultiples(11, 54), [11, 22, 33, 44]);
 console.log(`\n 84 uzdv...............`);
 
+// https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036/train/javascript
+function toCsvText(array) {
+    return array.join('\n');
+}
+console.log(toCsvText([
+                                  [ 0, 1, 2, 3, 45 ],
+                                  [ 10,11,12,13,14 ],
+                                  [ 20,21,22,23,24 ],
+                                  [ 30,31,32,33,34 ]
+                                 ] ));
+
+console.log(toCsvText([
+                                  [ -25, 21, 2, -33, 48 ],
+                                  [ 30,31,-32,33,-34 ]
+                                 ] ));
+
+console.log(toCsvText([
+                                  [ 5,55,5,5,55 ],
+                                  [ 6,6,66,23,24 ],
+                                  [ 666,31,66,33,7 ]
+                                 ] ));
+console.log(`\n 85 uzdv..............`);
+
+// https://www.codewars.com/kata/56bcaedfcf6b7f2125001118/train/javascript
+function htmlspecialchars(formData) {
+    return formData.replace(/&/g, '&amp;')
+                   .replace(/</g, '&lt;')
+                   .replace(/>/g, '&gt;')
+                   .replace(/"/g, '&quot;');
+}
+// kitas budas
+/*function htmlspecialchars(formData) {
+  let str = '';
+  for (let char of formData) {
+    switch(char) {
+        case '<':
+          str += '&lt;';
+          break;
+        case '>':
+          str += '&gt;';
+          break;
+        case '"':
+          str += '&quot;';
+          break;
+        case '&':
+          str += '&amp;';
+          break;
+        default: 
+          str += char;
+    }
+  }
+  
+  return str;
+}*/
+
+console.log(htmlspecialchars("<h2>Hello World</h2>"));
+console.log(htmlspecialchars("Hello, how would you & I fare?"));
+console.log(htmlspecialchars('How was "The Matrix"?  Did you like it?'));
+console.log(htmlspecialchars("<script>alert('Website Hacked!');</script>"));
+console.log(`\n 86 uzdv..............`);
+
+// https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/javascript
+function solution(str){
+  let i = 0;
+  let arr = [];
+  if (str.length % 2 !== 0) {
+    str += '_';
+  }
+  while (i < str.length) {
+    arr.push(str[i] + str[i + 1]);
+    i += 2;
+  }
+  return arr;
+}
+// kitas budas
+/*function solution(str){
+   let result = []
+
+   for (let i = 0; i < str.length; i += 2) {
+     if (i < str.length - 1) {
+       result.push(str[i] + str[i + 1])
+     } else {
+      result.push(str[i] + '_') 
+     }
+   }
+   
+   return result
+}*/
+
+console.log(solution("abcdef"), ["ab", "cd", "ef"]);
+console.log(solution("abcdefg"), ["ab", "cd", "ef", "g_"]);
+console.log(solution(""), []);
+console.log(`\n 87 uzdv..................`);
 
