@@ -149,3 +149,71 @@ console.log(solution("abcdefg"), ["ab", "cd", "ef", "g_"]);
 console.log(solution(""), []);
 console.log(`\n 87 uzdv..................`);
 
+//https://www.codewars.com/kata/56b29582461215098d00000f/train/javascript
+function pipeFix(numbers) {
+    let arr = [];
+    for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+// kitas budas
+/*const pipeFix = numbers => {
+  let results = [],
+      i=Math.min(...numbers);
+  while(i<=Math.max(...numbers)) { results.push(i); i++; }
+  return results
+}*/
+console.log(pipeFix([1,2,3,5,6,8,9]),[1,2,3,4,5,6,7,8,9]);
+console.log(pipeFix([1,2,3,12]),[1,2,3,4,5,6,7,8,9,10,11,12]);
+console.log(pipeFix([6, 9]), [6, 7, 8, 9]);
+console.log(`\n 88 uzdv..............`);
+
+// https://www.codewars.com/kata/59441520102eaa25260000bf/train/javascript
+function unusualFive() {
+  let five = 'hands';
+  return five.length;
+}
+console.log(unusualFive(), 5);
+console.log(`\n 89 uzdv.............`);
+
+// https://www.codewars.com/kata/55ad04714f0b468e8200001c/train/javascript
+function getChar(c) {
+  return String.fromCharCode(c);
+}
+console.log(getChar(55), '7');
+console.log(getChar(56), '8');
+console.log(getChar(57), '9');
+console.log(getChar(58), ':');
+console.log(getChar(59), ';');
+console.log(getChar(60), '<');
+console.log(getChar(61), '=');
+console.log(getChar(62), '>');
+console.log(getChar(63), '?');
+console.log(getChar(64), '@');
+console.log(getChar(65), 'A');
+console.log(`\n 90 uzdv...............`);
+
+// https://www.codewars.com/kata/57280481e8118511f7000ffa/train/javascript
+/*function splitAndMerge(string, separator) {
+  return string.split(' ').map(element => element.split('').join(separator)).join(' ');
+}*/
+
+// kitas budas
+function splitAndMerge(string, separator) {
+  const arr = [];
+  const text = string.split(" ");
+    for(let i = 0; i < text.length; i++){
+      const newText = text[i];
+      arr.push(newText.split("").join(separator));
+    }
+   
+  return arr.join(" ");
+  }
+console.log(splitAndMerge("My name is John"," "));
+console.log(splitAndMerge("My name is John","-"));
+console.log(splitAndMerge("Hello World!","."));
+console.log(splitAndMerge("Hello World!", ","));
+console.log(`\n 91 uzdv..................`);
+
+
