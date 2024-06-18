@@ -280,3 +280,41 @@ console.log(expressionMatter(10, 5, 6), 300);
 console.log(expressionMatter(1, 10, 1), 12);
 console.log(`\n 93 uzdv..............`);
 
+// https://www.codewars.com/kata/574b1916a3ebd6e4fa0012e7/train/javascript
+function isOpposite(s1, s2) {
+  if (s1.length !== s2.length || s1 === '' || s2 === '') {
+    return false;
+  }
+  for (let i = 0; i < s1.length; i++) {
+    if (s1[i] === s2[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isOpposite("ab","AB") , true);
+console.log(isOpposite("aB","Ab") , true);
+console.log(isOpposite("aBcd","AbCD") , true);
+console.log(isOpposite("aBcde","AbCD") , false);
+console.log(isOpposite("AB","Ab") , false);
+console.log(isOpposite("", ""), false);
+console.log(`\n 94 uzdv.................`);
+
+// https://www.codewars.com/kata/5708f682c69b48047b000e07/train/javascript
+
+/*function multiply(number){
+  let num = Math.abs(number);
+  let digits = num.toString();
+  return number * (5 ** digits.length);
+}*/
+// kitas budas
+function multiply(number){
+  const digitsNumber = Math.abs(number).toString().length;
+  return number * (5 ** digitsNumber);
+}
+console.log(multiply(10),250);
+console.log(multiply(5),25);
+console.log(multiply(200),25000);
+console.log(multiply(0),0);
+console.log(multiply(-2), -10);
+console.log(`\n 95 uzdv.........`);
