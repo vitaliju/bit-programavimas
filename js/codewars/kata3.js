@@ -318,3 +318,100 @@ console.log(multiply(200),25000);
 console.log(multiply(0),0);
 console.log(multiply(-2), -10);
 console.log(`\n 95 uzdv.........`);
+
+// https://www.codewars.com/kata/57238ceaef9008adc7000603/train/javascript
+/*function colorOf(r, g, b) {
+  let r1 = r.toString(16);
+  let g1 = g.toString(16);
+  let b1 = b.toString(16);
+  if (r1.length < 2) {
+    r1 = '0' + r1;
+  }
+  if (g1.length < 2) {
+    g1 = '0' + g1;
+  }
+  if (b1.length < 2) {
+    b1 = '0' + b1;
+  
+  }
+  return '#' + r1 + g1 + b1;
+}*/
+// kitas budas 
+ function colorOf(r,g,b) {
+   return "#" + toHex(r)+ toHex(g)+ toHex(b);  
+}
+
+function toHex(n) {
+  let result = n.toString(16);
+  return result.length == 1 ? "0" + result : result;  
+}
+console.log(colorOf(255,0,0), "#ff0000");
+console.log(colorOf(0,111,0), "#006f00");
+console.log(colorOf(1, 2, 3), "#010203");
+console.log(`\n 96 uzdv..................`);
+
+// https://www.codewars.com/kata/5731861d05d14d6f50000626/train/javascript
+function bigToSmall(arr) {
+  const array = [].concat(...arr).sort((a, b) => b - a).join('>');
+  return array;
+}
+console.log(bigToSmall([[1,2],[3,4],[5,6]]) , "6>5>4>3>2>1");
+console.log(bigToSmall([[1,3,5],[2,4,6]]) , "6>5>4>3>2>1");
+console.log(bigToSmall([[1, 1], [1], [1, 1]]), "1>1>1>1>1");
+console.log(`\n 97 uzdv..........................`);
+    
+// https://www.codewars.com/kata/5732d3c9791aafb0e4001236/train/javascript
+function roundIt(n) {
+  let num = n.toString().split('.');
+  if (num[0].length < num[1].length) {
+    return Math.ceil(n);
+  } else if (num[0].length > num[1].length) {
+    return Math.floor(n);
+  } else {
+    return Math.round(n);
+  }
+}
+console.log(roundIt(3.45) , 4);
+console.log(roundIt(34.5) , 34);
+console.log(roundIt(34.56), 35);  
+console.log(`\n 98 uzdv..................`);
+
+// https://www.codewars.com/kata/57238766214e4b04b8000011/train/javascript
+function changeMe(moneyIn) {
+  if (moneyIn === '£5') {
+    return `${'20p '.repeat(5 * 5).trimEnd()}`;
+  } else if (moneyIn === '£2') {
+    return `${'20p '.repeat(5 * 2).trimEnd()}`;
+  } else if (moneyIn === '£1') {
+    return `${'20p '.repeat(5 * 1).trimEnd()}`;
+  } else if (moneyIn === '50p') {
+    return `${'20p '.repeat(2).trimEnd()} 10p`;
+  } else if (moneyIn === '20p') {
+    return `${'10p '.repeat(2).trimEnd()}`;
+  }
+  return moneyIn;
+}
+// kitas budas
+/*function changeMe(moneyIn){
+  switch (moneyIn) {
+    case '£5':
+      var change = Array(25).fill('20p');
+      return change.join(' ');
+    case '£2':
+      var change = Array(10).fill('20p');
+      return change.join(' ');
+    case '£1':
+      var change = Array(5).fill('20p');
+      return change.join(' ');
+    case '50p':
+      return '20p 20p 10p';
+    case '20p':
+      return '10p 10p';
+    default:
+      return moneyIn;
+  }
+}*/
+console.log(changeMe('20p'));
+console.log(changeMe('£1'));
+console.log(changeMe('50p'));
+console.log(`\n 99 uzdv................`);
