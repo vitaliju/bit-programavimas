@@ -415,3 +415,76 @@ console.log(changeMe('20p'));
 console.log(changeMe('£1'));
 console.log(changeMe('50p'));
 console.log(`\n 99 uzdv................`);
+
+// https://www.codewars.com/kata/572b6b2772a38bc1e700007a/train/javascript
+function uniTotal(string) {
+  let count = 0
+  for (let i = 0; i < string.length; i++) {
+    count += string.charCodeAt(i);
+  }
+  return count;
+}
+console.log(uniTotal(''));
+console.log(uniTotal('a'));
+console.log(uniTotal('c'));
+console.log(uniTotal('e'));
+console.log(uniTotal('aaa'));
+console.log(uniTotal('Mary Had A Little Lamb', 1873));
+
+// https://www.codewars.com/kata/56b97b776ffcea598a0006f2/train/javascript
+function bubblesortOnce(arr) {
+  let array = [...arr];
+  for (let i = 0; i < array.length - 1; i++) {
+    if (array[i] > array[i + 1]) {
+      [array[i], array[i + 1]] = [array[i + 1], array[i]];
+    }
+  }
+  return array;
+}
+console.log(bubblesortOnce([9, 7, 5, 3, 1, 2, 4, 6, 8]), [7, 5, 3, 1, 2, 4, 6, 8, 9]);
+console.log(`\n 101 uzdv.....................`);
+
+// https://www.codewars.com/kata/5733d6c2d780e20173000baa/train/javascript
+function maxMin(arr1, arr2) {
+  const arr = arr2.map((v, i) => v - arr1[i], 0);
+  return [Math.max(...arr.map(v => Math.abs(v))), Math.min(...arr.map(v => Math.abs(v)))];
+}
+// kitas budas 
+/*function maxMin(arr1,arr2){
+  var diffs = [];
+  for (i = 0; i < arr1.length; i++) {
+    diffs.push(Math.abs(arr1[i]-arr2[i]))
+  }
+  return [Math.max(...diffs), Math.min(...diffs)]
+}*/
+console.log(maxMin([1,3,5],[9,8,7])               , [8,2]);
+console.log(maxMin([1,10,100,1000],[0,0,0,0])     , [1000,1]);
+console.log(maxMin([10,20,30,40],[111,11,1,-111]) , [151,9]);
+console.log(`\n 102 uzdv................`);
+
+// https://www.codewars.com/kata/573156709a231dcec9000ee8/train/javascript
+function tailAndHead(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    result.push(arr[i] % 10 + Number((arr[i + 1] + '')[0]));
+  }
+  return result.reduce((a, b) => a * b);
+}
+// kitas budas
+/*function tailAndHead(arr) {
+
+  const test = arr.map((item, index) => {
+    const last = item % 10;
+    const first = arr[index + 1]
+    const firstNum = '' + first
+    return last + Number(firstNum[0]);
+  })
+
+  test.pop();
+
+  return test.reduce((prev, next) => prev * next);
+}*/
+console.log(tailAndHead([123,456,789,12,34,56,78]) , 532350);
+console.log(tailAndHead([1,2,3,4,5]) , 945);
+console.log(tailAndHead([111,2345,66,78,900]) , 7293);
+console.log(tailAndHead([35456, 782, 569, 2454, 875]), 12012);
