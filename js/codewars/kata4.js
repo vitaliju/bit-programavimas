@@ -59,3 +59,50 @@ console.log(countGrade([50,60,70,80,90,100]) , {S:1, A:1, B:1, C:2, D:1, X:0});
 console.log(countGrade([65,75,,85,85,95,100,100]) , {S:2, A:1, B:2, C:2, D:0, X:0});
 console.log(countGrade([-1, -1, -1, -1, -1, -1]), { S: 0, A: 0, B: 0, C: 0, D: 0, X: 6 });
 console.log(`\n 105 uzdv...........................`);
+// https://www.codewars.com/kata/572fdeb4380bb703fc00002c
+function isolateIt(arr) {
+    return arr.map(x => {
+        if (x.length % 2 === 0) {
+            return x.slice(0, x.length / 2) + '|' + x.slice(x.length / 2);
+        } else if (x.length % 2 !== 0) {
+            return x.slice(0, x.length / 2) + '|' + x.slice((x.length / 2) + 1);
+        }
+    });
+}
+// kitas budas
+/*function isolateIt(arr) {
+    return arr.map((element) => {
+        return element.slice(0, element.length / 2) + "|" + element.slice(-element.length / 2)
+    });
+}*/
+console.log(isolateIt(["abcd","efgh"]) , ["ab|cd","ef|gh"]);
+console.log(isolateIt(["abcde","fghij"]) , ["ab|de","fg|ij"]);
+console.log(isolateIt(["1234", "56789"]), ["12|34", "56|89"]);
+console.log(`\n 106 uzdv.....................`);
+// https://www.codewars.com/kata/57241e0f440cd279b5000829/train/javascript
+function sumMul(n, m) {
+    let sum = 0;
+    if (n < 1 || m < 0) {
+        return 'INVALID';
+    }
+    for (let i = n; i <= m; i += n) {
+        sum += i;
+    }
+    return sum;
+}
+console.log(sumMul(0,0),"INVALID");
+console.log(sumMul(2,9),20);
+console.log(sumMul(4, -7), "INVALID");
+console.log(`\n 107 uzdv.................`);
+// https://www.codewars.com/kata/545993ee52756d98ca0010e1/train/javascript
+function none(arr, fun) {
+    for (let i = 0; i < arr.length; i++) {
+        if (fun(arr[i]) === true) {
+            return false;                  // check `fun` for `item` - if `fun` has `item`, return false.
+        }
+    }
+    return true;
+}
+console.log(none([1, 2, 3, 4, 5], function (item) { return item > 5 }), true);
+console.log(none([1, 2, 3, 4, 5], function (item) { return item > 4 }), false);
+console.log(`\n 108 uzdv..................`);
