@@ -22,6 +22,7 @@
     "methodString": "node --watch ./js/metodai/methodString.js",
     "methodNumbers": "node --watch ./js/metodai/methodNumbers.js",
     "numberSize": "node --watch ./js/metodai/numberSize.js",
+    "default": "node --watch ./js/duomenys/default.js",
     "typeof": "node --watch ./js/duomenys/typeof.js",
     "testai": "node --watch ./js/ciklai/testai.js",
     "for": "node --watch ./js/ciklai/for.js",
