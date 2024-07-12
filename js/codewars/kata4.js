@@ -106,3 +106,97 @@ function none(arr, fun) {
 console.log(none([1, 2, 3, 4, 5], function (item) { return item > 5 }), true);
 console.log(none([1, 2, 3, 4, 5], function (item) { return item > 4 }), false);
 console.log(`\n 108 uzdv..................`);
+
+// https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/javascript
+function countPositivesSumNegatives(input) {
+    let positive = 0;
+    let negative = 0;
+    if (input === 0 || input.length < 1) {
+        return [];
+    } else {
+        input.map(item => {
+            if (item > 0) {
+                positive++;
+            } else if (item < 0) {
+                negative += item;
+            }
+        });
+    }
+    return [positive, negative];
+}
+
+// kitas budas
+/*function countPositivesSumNegatives(input) {
+  if(!input || input.length == 0) return [];
+
+  let positiveCount = input.reduce((sum, item) => item > 0 ? ++sum : sum, 0);
+  let negativeSum = input.reduce((sum, item) => item < 0 ? sum + item : sum, 0);
+  
+  return [positiveCount, negativeSum];
+}*/
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]));
+console.log(`/n 109 uzdv............................`);
+
+// https://www.codewars.com/kata/583203e6eb35d7980400002a/train/javascript
+function countSmileys(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === ':)' || arr[i] === ':D'
+            || arr[i] === ';-D'
+            || arr[i] === ':~)'
+            || arr[i] === ';~D'
+            || arr[i] === ':-D'
+            || arr[i] === ';)') {
+            count++;
+        }
+    }
+    return count;
+}
+// kitas budas
+/*function countSmileys(arr) {
+  let smileys = 0;
+  let validSmileys = [":D", ";D", ":)", ";)", ":-D", ";-D", ":-)", ";-)", ":~D", ";~D", ":~)", ";~)"];
+  for (let i = 0; i < arr.length; i++) {
+    if (validSmileys.includes(arr[i])) {
+      smileys++;
+    }
+  }
+  return smileys;
+}*/
+console.log(countSmileys([]                             ), 0);
+console.log(countSmileys([':D',':~)',';~D',':)']        ), 4);
+console.log(countSmileys([':)',':(',':D',':O',':;']     ), 2);
+console.log(countSmileys([';]', ':[', ';*', ':$', ';-D']), 1);
+console.log(`\n 110 uzdv...........................`);
+
+// https://www.codewars.com/kata/583f158ea20cfcbeb400000a/train/javascript
+function arithmetic(a, b, operator){
+  if (operator === 'add') {
+    return a + b;
+  } else if (operator === 'subtract') {
+    return a - b;
+  } else if (operator === 'multiply') {
+    return a * b;
+  } else {
+    return a / b;
+  }
+}
+// kitas budas
+/*function arithmetic(a, b, operator){
+  switch(operator) {
+    case 'add':
+      return a + b;
+    case 'subtract':
+      return a - b;
+    case 'multiply':
+      return a * b;
+    case 'divide':
+      return a / b;
+  }
+}*/
+console.log(arithmetic(1, 2, "add"), 3, "'add' should return the two numbers added together!");
+console.log(arithmetic(8, 2, "subtract"), 6, "'subtract' should return a minus b!");
+console.log(arithmetic(5, 2, "multiply"), 10, "'multiply' should return a multiplied by b!");
+console.log(arithmetic(8, 2, "divide"), 4, "'divide' should return a divided by b!");
+console.log(`\n 111 uzdv........................`);
