@@ -428,4 +428,4 @@ console.log(
   ["Jimm", "Cari", "aret"]
 );
 console.log(friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"]);
-console.log(`\n 114 uzdv.............................`);
+
