@@ -94,3 +94,49 @@ console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100), false);
 console.log(smallEnough([101, 45, 75, 105, 99, 107], 107), true);
 console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120), true);
 console.log(`\n 118 uzdv..............`);
+
+// https://www.codewars.com/kata/57a5c31ce298a7e6b7000334/train/javascript
+function binToDec(bin) {
+    return parseInt(bin, 2);
+}
+console.log(binToDec('0'));
+console.log(binToDec('1'));
+console.log(binToDec('10'));
+console.log(binToDec('1001001'));
+console.log(`\n 119 uzdv.............`);
+
+// https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
+function noSpace(x) {
+    return x.split(' ').join('');
+}
+// kitas budas
+/*function noSpace(x) {
+    return x.replaceAll(' ', '');
+}*/
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'), '8j8mBliB8gimjB8B8jlB');
+console.log(noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd'), '88Bifk8hB8BB8BBBB888chl8BhBfd');
+console.log(noSpace('8aaaaa dddd r     '), '8aaaaaddddr');
+console.log(`\n 120 uzdv....................`);
+
+// https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/javascript
+function solve(s) {
+    return s.replace(/[a-z]/g, '').length > s.length / 2
+        ? s.toUpperCase()
+        : s.toLowerCase();
+}
+// kitas budas
+/*function solve(s) {
+    const lowercase = s.match(/[a-z]/g);
+    const uppercase = s.match(/[A-Z]/g);
+    if (!lowercase || !uppercase) {
+        return s;
+    }
+    return lowercase.length >= uppercase.length
+        ? s.toLowerCase()
+        : s.toUpperCase();
+}*/
+console.log(solve("code"), "code");
+console.log(solve("CODe"), "CODE");
+console.log(solve("COde"), "code");
+console.log(solve("Code"), "code");
+console.log(`\n 121 uzdv...........`);
