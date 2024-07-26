@@ -140,3 +140,82 @@ console.log(solve("CODe"), "CODE");
 console.log(solve("COde"), "code");
 console.log(solve("Code"), "code");
 console.log(`\n 121 uzdv...........`);
+
+// https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+function solution(string) {
+    let str = string.split('');
+    let newStr = '';
+    str.forEach(letter => {
+        if (letter === letter.toUpperCase()) {
+            newStr += ' ' + letter;
+        } else {
+            newStr += letter;
+        }
+    });
+    return newStr;
+}
+// kitas budas
+/*function solution(string) {
+    return (string.replace(/([A-Z])/g, ' $1'));
+
+}*/
+/*const solution = (string) => {
+  return string.split('')
+    .map(letter => letter == letter.toUpperCase() ? letter = ` ${letter}` : letter)
+    .join('');
+}*/
+console.log(solution(""), "");
+console.log(solution("camelCasing"), "camel Casing");
+console.log(solution("camelCasingTest"), "camel Casing Test");
+console.log(`\n 122 uzdv..............`);
+
+// https://www.codewars.com/kata/542c0f198e077084c0000c2e/train/javascript
+function getDivisorsCnt(n) {
+    let count = 0;
+    for (let i = n; i > 0; i--) {
+        if (n % i === 0) {
+            count++;
+        }
+    }
+    return count;
+}
+// kitas budas
+/*function getDivisorsCnt(n) {
+    let count = 0
+
+    for (let i = 1; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            if (i === Math.sqrt(n)) {
+                count++
+            } else {
+                count += 2
+            }
+        }
+    }
+
+    return count
+}*/
+console.log(getDivisorsCnt(1), 1);
+console.log(getDivisorsCnt(10), 4);
+console.log(getDivisorsCnt(11), 2);
+console.log(getDivisorsCnt(54), 8);
+console.log(`\n 123 uzdv............`);
+
+// https://www.codewars.com/kata/54e6533c92449cc251001667/train/javascript
+function uniqueInOrder(iterable) {
+    let arr = [];
+    for (let i = 0; i < iterable.length; i++) {
+        if (iterable[i] !== iterable[i + 1]) {
+            arr.push(iterable[i]);
+        }
+    }
+    return arr;
+}
+// kitas budas
+/*const uniqueInOrder = function (iterable) {
+    return [...iterable].filter((a, i) => a !== iterable[i - 1])
+}*/
+console.log(uniqueInOrder('AAAABBBCCDAABBB'), ['A', 'B', 'C', 'D', 'A', 'B']);
+console.log(uniqueInOrder('AAABBBCCDABBBccc'));
+console.log(uniqueInOrder('AAAABBBCCDAABBBnnn'));
+console.log(`\n 124 uzdv...............`);
