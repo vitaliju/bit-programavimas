@@ -219,3 +219,39 @@ console.log(uniqueInOrder('AAAABBBCCDAABBB'), ['A', 'B', 'C', 'D', 'A', 'B']);
 console.log(uniqueInOrder('AAABBBCCDABBBccc'));
 console.log(uniqueInOrder('AAAABBBCCDAABBBnnn'));
 console.log(`\n 124 uzdv...............`);
+
+//https://www.codewars.com/kata/5503013e34137eeeaa001648/train/javascript
+function diamond(n) {
+    if (n < 1 || n % 2 === 0) {
+        return null;
+    }
+    let result = '';
+    let mid = Math.ceil(n / 2);
+    for (let i = 1; i <= n; i++) {
+        if (i <= mid) {
+            result += ''.repeat(mid - 1) + '*'.repeat(2 * i - 1) + `\n`;
+        } else {
+            result += ''.repeat(i - mid) + '*'.repeat(2 * (n - i) + 1) + `\n`;
+        }
+    }
+    return result;
+}
+// kitas budas
+/*function diamond(n) {
+    if (n <= 0 || n % 2 === 0) {
+       return null;
+    }
+    let str = '';
+    for (let i = 0; i < n; i++) {
+        let len = Math.abs((n - 2 * i - 1) / 2);
+        str += ' '.repeat(len);
+        str += '*'.repeat(n - 2 * len);
+        str += '\n';
+    }
+       return str
+}*/
+console.log(diamond(1));
+console.log(diamond(3));
+console.log(diamond(5));
+console.log(diamond(4));
+console.log(`\n 125 uzdv..........`);
