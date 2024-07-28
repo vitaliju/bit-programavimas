@@ -255,3 +255,58 @@ console.log(diamond(3));
 console.log(diamond(5));
 console.log(diamond(4));
 console.log(`\n 125 uzdv..........`);
+// https://www.codewars.com/kata/55908aad6620c066bc00002a/train/javascript
+function XO(str) {
+    let x = str.toLowerCase().match(/x/g);
+    let o = str.toLowerCase().match(/o/g);
+    return (x && x.length) === (o && o.length);
+}
+// kitas budas
+/*const XO = str => {
+    str = str.toLowerCase().split('');
+    return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+}*/
+
+/*function XO(str) {
+    return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+}*/
+console.log(XO('xo'), true);
+console.log(XO("xxOo"), true);
+console.log(XO("xxxm"), false);
+console.log(XO("Oo"), false);
+console.log(XO("ooom"), false);
+console.log(`\n 126 uzdv.................`);
+
+// https://www.codewars.com/kata/56606694ec01347ce800001b/train/javascript
+function isTriangle(a, b, c) {
+    let max = Math.max(a, b, c);
+    let sum = a + b + c;
+    return sum - max > max;
+}
+// kitas budas
+/*function isTriangle(a, b, c) {
+    return a + b > c && a + c > b && c + b > a;
+}*/
+console.log(isTriangle(1, 2, 2), true);
+console.log(isTriangle(7, 2, 2), false);
+console.log(`\n 127 uzdv...............`);
+
+// https://www.codewars.com/kata/57a4d500e298a7952100035d/train/javascript
+function hexToDec(hexString) {
+    return parseInt(hexString, 16);
+}
+console.log(hexToDec("1"), 1);
+console.log(hexToDec("a"), 10);
+console.log(hexToDec("10"), 16);
+console.log(hexToDec("FF"), 255);
+console.log(hexToDec("-C"), -12);
+console.log(`\n 128 uzdv...........`);
+
+// https://www.codewars.com/kata/57f609022f4d534f05000024/train/javascript
+function stray(numbers) {
+    return numbers.find(number => numbers.indexOf(number) === numbers.lastIndexOf(number));
+}
+console.log(stray([1, 1, 2]), 2);
+console.log(stray([1, 2, 1]), 2);
+console.log(stray([2, 1, 1]), 2);
+console.log(`\n 129 uzdv................`);
