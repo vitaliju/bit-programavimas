@@ -310,3 +310,94 @@ console.log(stray([1, 1, 2]), 2);
 console.log(stray([1, 2, 1]), 2);
 console.log(stray([2, 1, 1]), 2);
 console.log(`\n 129 uzdv................`);
+
+// https://www.codewars.com/kata/52f3149496de55aded000410/train/javascript
+function sumDigits(number) {
+    return Math.abs(number).toString().split('').reduce((a, b) => a + Number(b), 0);
+}
+console.log(sumDigits(10), 1);
+console.log(sumDigits(99), 18);
+console.log(sumDigits(-32), 5);
+console.log(`\n 130 uzdv..........`);
+
+// https://www.codewars.com/kata/539ee3b6757843632d00026b/train/javascript
+const capitals = function (word) {
+    const str = word.split('');
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase()) {
+            arr.push(i);
+        }
+    }
+    return arr;
+};
+console.log(capitals('CodEWaRs'), [0, 3, 4, 6]);
+console.log(capitals('CodEWARs'));
+console.log(capitals('COdEWArs'));
+console.log(`\n 131 uzdv.....................`);
+
+// https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript
+function duplicateEncode(word) {
+    return word.toLowerCase().split('').map(function (a, i, w) {
+        return w.indexOf(a) === w.lastIndexOf(a) ? '(' : ')'
+    }).join('');
+}
+// kitas budas
+/*function duplicateEncode(word) {
+    let result = "";
+    let str = word.toLocaleLowerCase();
+    for (let i = 0; i < str.length; i++) {
+        str.split(str.charAt(i)).length > 2 ? result += ")" : result += "(";
+    }
+    return result;
+}*/
+console.log(duplicateEncode("din"), "(((");
+console.log(duplicateEncode("recede"), "()()()");
+console.log(duplicateEncode("Success"), ")())())", "should ignore case");
+console.log(duplicateEncode("(( @"), "))((");
+console.log(`\n 132 uzdv...................`);
+
+// https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript
+function countSheeps(sheep) {
+    let count = 0;
+    for (let i = 0; i <= sheep.length; i++) {
+        if (sheep[i] === true) {
+            count++;
+        }
+    }
+    return count;
+}
+// kitas budas
+/*function countSheeps(arr) {
+    return arr.filter(Boolean).length;
+}*/
+console.log(countSheeps([false]));
+console.log(countSheeps([true]));
+console.log(countSheeps([undefined, null, false, true]));
+console.log(countSheeps([undefined, null, false, true, true, false, null, undefined]));
+console.log(countSheeps([true, true, true, false, true, true, true, true, true, false, true, false, true, false, false, true, true, true, true, true, false, false, true, true]));
+console.log(`\n 133 uzdv.............`);
+
+// https://www.codewars.com/kata/555eded1ad94b00403000071/train/javascript
+function SeriesSum(n) {
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        sum += 1 / (1 + i * 3);
+    }
+    return sum.toFixed(2);
+}
+console.log(SeriesSum(2), "1.25");
+console.log(SeriesSum(3), "1.39");
+console.log(SeriesSum(4), "1.49");
+console.log(`\n 134 uzdv..............`);
+
+// https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/javascript
+function flattenAndSort(array) {
+    return array.flat().sort((a, b) => a - b);
+}
+console.log(flattenAndSort([]), []);
+console.log(flattenAndSort([[], []]), []);
+console.log(flattenAndSort([[], [1]]), [1]);
+console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]), [1, 2, 3, 4, 5, 6, 100]);
+console.log(`\n 135 uzdv............`);
