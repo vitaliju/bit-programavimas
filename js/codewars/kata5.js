@@ -401,3 +401,55 @@ console.log(flattenAndSort([[], [1]]), [1]);
 console.log(flattenAndSort([[3, 2, 1], [7, 9, 8], [6, 4, 5]]), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
 console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]), [1, 2, 3, 4, 5, 6, 100]);
 console.log(`\n 135 uzdv............`);
+
+// https://www.codewars.com/kata/5808e2006b65bff35500008f/solutions/javascript
+function position(letter) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return `Position of alphabet: ${alphabet.indexOf(letter) + 1}`;
+}
+console.log(position('a'));
+console.log(position('n'));
+console.log(position('b'));
+console.log(position('h'));
+console.log(`\n 136 uzdv................`);
+
+// https://www.codewars.com/kata/5899642f6e1b25935d000161/train/javascript
+function mergeArrays(arr1, arr2) {
+    let arr = arr1.concat(arr2).sort((a, b) => a - b);
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[i + 1]) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+// kitas budas
+/*function mergeArrays(arr1, arr2) {
+    return Array.from(new Set(arr1.concat(arr2))).sort((a, b) => a - b);
+}*/
+/* function mergeArrays(arr1, arr2) {
+  return arr1
+    .filter((item) => !arr2.includes(item))
+    .concat(arr2)
+    .sort((a, b) => a - b)
+}*/
+console.log(mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]), [1, 2, 3, 4, 5, 6, 7, 8]);
+console.log(mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]), [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]);
+console.log(`\n 137 uzdv...............`);
+
+// https://www.codewars.com/kata/576b93db1129fcf2200001e6/javascript
+const sumArray = array => array
+    ? array.sort((a, b) => a - b).slice(1, (-1)).reduce((a, b) => a + b, 0)
+    : 0;
+
+console.log(sumArray(null), 0);
+console.log(sumArray([]), 0);
+console.log(sumArray([3]), 0);
+console.log(sumArray([3, 5]), 0);
+console.log(sumArray([6, 2, 1, 8, 10]), 16);
+console.log(sumArray([0, 1, 6, 10, 10]), 17);
+console.log(sumArray([-6, -20, -1, -10, -12]), -28);
+console.log(sumArray([-6, 20, -1, 10, -12]), 3);
+console.log(`\n 138 uzdv...........`);
