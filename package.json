@@ -6,6 +6,7 @@
         "for-other": "node --watch ./js/ciklai/for-other.js",
         "clock": "node --watch ./js/ciklai/clock.js",
         "matrix": "node --watch ./js/ciklai/matrix.js",
+        "kata6": "node --watch ./js/codewars/kata6.js",
         "kata5": "node --watch ./js/codewars/kata5.js",
         "kata4": "node --watch ./js/codewars/kata4.js",
         "kata3": "node --watch ./js/codewars/kata3.js",
