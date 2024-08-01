@@ -101,3 +101,14 @@ console.log(validatePIN("000000"), true);
 console.log(validatePIN("123456"), true);
 console.log(validatePIN("090909"), true);
 console.log(`\n 142 uzdv..................`);
+
+// https://www.codewars.com/kata/56b1f01c247c01db92000076/train/javascript
+function doubleChar(str) {
+    return str
+}
+console.log(doubleChar("abcd"), "aabbccdd");
+console.log(doubleChar("Adidas"), "AAddiiddaass");
+console.log(doubleChar("1337"), "11333377");
+console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
+console.log(doubleChar("123456"), "112233445566");
+console.log(doubleChar("%^&*("), "%%^^&&**((");
