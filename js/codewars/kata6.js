@@ -107,10 +107,13 @@ function doubleChar(str) {
     const newStr = str.split('');
     let double = '';
     for (let i = 0; i < newStr.length; i++) {
-        double += newStr[i] + newStr[i];
+        double += newStr[i].repeat(2);
     }
     return double;
 }
+// kitas budas
+// const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
 console.log(doubleChar("abcd"), "aabbccdd");
 console.log(doubleChar("Adidas"), "AAddiiddaass");
 console.log(doubleChar("1337"), "11333377");
@@ -118,3 +121,52 @@ console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
 console.log(doubleChar("123456"), "112233445566");
 console.log(doubleChar("%^&*("), "%%^^&&**((");
 console.log(`\n 143 uzdv.............`);
+
+// https://www.codewars.com/kata/59cfc000aeb2844d16000075/train/javascript
+function capitalize(s) {
+    return [s.split('').map((e, i) => i % 2 === 0 ? e.toUpperCase() : e.toLowerCase()).join(''),
+    s.split('').map((e, i) => i % 2 !== 0 ? e.toUpperCase() : e.toLowerCase()).join('')
+    ];
+}
+console.log(capitalize("abcdef"), ['AbCdEf', 'aBcDeF']);
+console.log(capitalize("codewars"), ['CoDeWaRs', 'cOdEwArS']);
+console.log(capitalize("abracadabra"), ['AbRaCaDaBrA', 'aBrAcAdAbRa']);
+console.log(capitalize("codewarriors"), ['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
+console.log(`\n 144 uzdv.............`);
+
+// https://www.codewars.com/kata/530e15517bc88ac656000716/train/javascript
+function rot13(message) {
+    let input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+    return message.replace(/[a-z]/gi, char => output[input.indexOf(char)]);
+}
+console.log(rot13('grfg'));
+console.log(`\n 145 uzdv.............`);
+
+// https://www.codewars.com/kata/54ff0d1f355cfd20e60001fc/train/javascript
+function factorial(n) {
+    if (n < 0 || n > 12) {
+        return 'RangeError';
+    }
+    return n > 1 ? n * factorial(n - 1) : 1;
+}
+console.log(factorial(0), 1, "factorial for 0 is 1");
+console.log(factorial(1), 1, "factorial for 1 is 1");
+console.log(factorial(2), 2, "factorial for 2 is 2");
+console.log(factorial(3), 6, "factorial for 3 is 6");
+console.log(factorial(13));
+console.log(`\n 145 uzdv...................`);
+
+// https://www.codewars.com/kata/554e4a2f232cdd87d9000038/train/javascript
+function dnaStrand(dna) {
+    let pairs = { A: 'T', T: 'A', C: 'G', G: 'C' };
+    return dna = dna.replace(/./g, c => pairs[c]);
+}
+// kitas budas
+/*function DNAStrand(dna) {
+    return dna.replace(/A/g, 't').replace(/T/g, 'a').replace(/C/g, 'g').replace(/G/g, 'c').toUpperCase();
+}*/
+console.log(dnaStrand("AAAA"), 'TTTT');
+console.log(dnaStrand("ATTGC"), 'TAACG');
+console.log(dnaStrand("GTAT"), 'CATA');
+console.log(`\n 146 uzdv..............`);
