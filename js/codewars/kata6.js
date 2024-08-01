@@ -104,7 +104,12 @@ console.log(`\n 142 uzdv..................`);
 
 // https://www.codewars.com/kata/56b1f01c247c01db92000076/train/javascript
 function doubleChar(str) {
-    return str
+    const newStr = str.split('');
+    let double = '';
+    for (let i = 0; i < newStr.length; i++) {
+        double += newStr[i] + newStr[i];
+    }
+    return double;
 }
 console.log(doubleChar("abcd"), "aabbccdd");
 console.log(doubleChar("Adidas"), "AAddiiddaass");
@@ -112,3 +117,4 @@ console.log(doubleChar("1337"), "11333377");
 console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
 console.log(doubleChar("123456"), "112233445566");
 console.log(doubleChar("%^&*("), "%%^^&&**((");
+console.log(`\n 143 uzdv.............`);
