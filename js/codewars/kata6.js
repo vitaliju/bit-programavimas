@@ -188,3 +188,16 @@ console.log(sequenceSum(1, 5, 1), 15);
 console.log(sequenceSum(1, 5, 3), 5);
 console.log(sequenceSum(6, 5, 3), 0);
 console.log(`\n 147 uzdv............`);
+
+// https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/train/javascript
+function firstNonConsecutive(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i - 1] + 1 !== arr[i]) {
+            return arr[i];
+        }
+    }
+    return null;
+}
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+console.log(firstNonConsecutive([1, 2, 3, 4,]));
+console.log(`\n  148 uzdv.....................`);
