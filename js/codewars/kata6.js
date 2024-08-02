@@ -198,6 +198,31 @@ function firstNonConsecutive(arr) {
     }
     return null;
 }
+// kitas budas
+/*function firstNonConsecutive(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if ((arr[i] - arr[0]) !== i) {
+            return arr[i]
+        }
+    }
+    return null
+}*/
 console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
 console.log(firstNonConsecutive([1, 2, 3, 4,]));
 console.log(`\n  148 uzdv.....................`);
+
+// https://www.codewars.com/kata/539de388a540db7fec000642/train/javascript
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+    if (enteredCode !== correctCode || Date.parse(currentDate) > Date.parse(expirationDate)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+// kitas budas
+/*function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+    return enteredCode === correctCode && new Date(currentDate) <= new Date(expirationDate);
+}*/
+console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'), true);
+console.log(checkCoupon('123a', '123', 'September 5, 2014', 'October 1, 2014'), false);
+console.log(`\n 149 uzdv..............`);
