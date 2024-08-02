@@ -170,3 +170,21 @@ console.log(dnaStrand("AAAA"), 'TTTT');
 console.log(dnaStrand("ATTGC"), 'TAACG');
 console.log(dnaStrand("GTAT"), 'CATA');
 console.log(`\n 146 uzdv..............`);
+
+// https://www.codewars.com/kata/586f6741c66d18c22800010a/train/javascript
+const sequenceSum = (begin, end, step) => {
+    let sum = 0;
+    for (let i = begin; i <= end; i += step) {
+        if (begin > end) {
+            return 0;
+        } else {
+            sum += i;
+        }
+    }
+    return sum;
+};
+console.log(sequenceSum(2, 6, 2), 12);
+console.log(sequenceSum(1, 5, 1), 15);
+console.log(sequenceSum(1, 5, 3), 5);
+console.log(sequenceSum(6, 5, 3), 0);
+console.log(`\n 147 uzdv............`);
