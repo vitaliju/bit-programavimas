@@ -226,3 +226,37 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
 console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'), true);
 console.log(checkCoupon('123a', '123', 'September 5, 2014', 'October 1, 2014'), false);
 console.log(`\n 149 uzdv..............`);
+
+// https://www.codewars.com/kata/57a083a57cb1f31db7000028/train/javascript
+function powersOfTwo(n) {
+    let power = [];
+    for (let i = 0; i <= n; i++) {
+        power.push(2 ** i);
+    }
+    return power;
+}
+console.log(powersOfTwo(0), [1]);
+console.log(powersOfTwo(1), [1, 2]);
+console.log(powersOfTwo(4), [1, 2, 4, 8, 16]);
+console.log(`\n 150 uzdv...........`);
+
+// https://www.codewars.com/kata/57fae964d80daa229d000126/javascript
+function remove(string) {
+    if (!string.at(-1).includes('!')) {
+        return string;
+    } else {
+        return string.slice(0, -1);
+    }
+
+}
+// kitas budas
+/*function remove(string) {
+    return string.endsWith('!') ? string.slice(0, -1) : string;
+}*/
+console.log(remove("Hi!"));
+console.log(remove("Hi!!!"));
+console.log(remove("!Hi"));
+console.log(remove("!Hi!"));
+console.log(remove("Hi! Hi!"));
+console.log(remove("Hi"));
+console.log(`\n 151 uzdv............`);
