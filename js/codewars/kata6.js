@@ -289,3 +289,20 @@ console.log(include([1, 2, 3, 4], 3), true);
 console.log(include([1, 2, 4, 5], 3), false);
 console.log(include([], 3), false);
 console.log(`\n 152 uzdv..........`);
+
+// https://www.codewars.com/kata/546f922b54af40e1e90001da/javascript
+function alphabetPosition(text) {
+    return text.split('').filter(i => /[a-zA-Z]/.test(i)).map(i => i.toLowerCase().charCodeAt(0) - 96).join(' ');
+}
+// kitas budas
+/*function alphabetPosition(text) {
+    const str = text.replace(/([^a-z])/ig, '').toLowerCase().split('')
+
+    for (let i = 0; i < str.length; i++) {
+        str[i] = str[i].charCodeAt() - 96
+    }
+    return str.join(' ')
+}*/
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(alphabetPosition("The narwhal bacons at midnight."));
+console.log(`\n 153 uzdv..................`);
