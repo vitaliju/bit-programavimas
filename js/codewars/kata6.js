@@ -273,6 +273,10 @@ function sumOfDifferences(arr) {
     }
     return sum;
 }
+// kitas budas
+/*function sumOfDifferences(arr) {
+    return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+} */
 console.log(sumOfDifferences([1, 2, 10]), 9);
 console.log(sumOfDifferences([-3, -2, -1]), 2);
 console.log(`\n 151 uzdv..............`); 
