@@ -306,3 +306,57 @@ function alphabetPosition(text) {
 console.log(alphabetPosition("The sunset sets at twelve o' clock."));
 console.log(alphabetPosition("The narwhal bacons at midnight."));
 console.log(`\n 153 uzdv..................`);
+
+// https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9/train/javascript
+const number = function (array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        result.push(`${i + 1}: ${array[i]}`);
+    }
+    return result;
+}
+// kitas budas
+//const number = array => array.map((n, i) => `${i + 1}: ${n}`);
+console.log(number([]), []);
+console.log(number(["a", "b", "c"]), ["1: a", "2: b", "3: c"]);
+console.log(`\n 154 uzdv..............`);
+
+// https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
+const summation = num => num * (1 + num) / 2;
+
+// kitas budas
+/*function summation(num) {
+    let result = 0;
+    for (let i = 1; i <= num; i++) {
+        result += i;
+    }
+
+    return result;
+}*/
+console.log(summation(1), 1);
+console.log(summation(2), 3);
+console.log(summation(8), 36);
+console.log(`\n 155 uzdv..............`);
+
+// https://www.codewars.com/kata/57a049e253ba33ac5e000212/train/javascript
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+// kitas budas
+/* function factorial(n){
+ let sum = 1;
+  for (let i = 1; i <= n; i++){
+    sum = sum * i;
+  }
+  return sum; 
+
+}*/
+console.log(factorial(0), 1);
+console.log(factorial(1), 1);
+console.log(factorial(4), 24);
+console.log(factorial(7), 5040);
+console.log(factorial(17), 355687428096000);
+console.log(`\n 156 uzdv................`);
