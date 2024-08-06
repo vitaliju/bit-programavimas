@@ -401,3 +401,45 @@ function printArray(array) {
 console.log(printArray([2, 4, 5, 2]));
 console.log(printArray(['a', 'l', 'o', 'h', 'a']));
 console.log(`\n 158 uzdv...........`);
+
+// https://www.codewars.com/kata/5a3dd29055519e23ec000074/train/javascript
+function checkExam(array1, array2) {
+    let count = 0;
+
+    for (let i = 0; i < array2.length; i++) {
+
+        if (array1[i] !== array2[i]) {
+            count--;
+        } else if (array1[i] === array2[i]) {
+            count += 4;
+        } else if (array2[i] === '') {
+            count = 0;
+        }
+        if (count < 0) {
+            return 0;
+        }
+    }
+
+    return count;
+}
+console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]), 6);
+console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b", ""]), 7);
+console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
+console.log(checkExam(["b", "c", "b", "a"], ["", "a", "a", "c"]), 0);
+console.log(`\n 159 uzdv.............`);
+
+// https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+function removeSmallest(numbers) {
+    let min = numbers.indexOf(Math.min(...numbers));
+    return [...numbers.slice(0, min), ...numbers.slice(min + 1)];
+}
+// kitas budas
+/*function removeSmallest(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((a, b)=> b !== indexOfMin);
+} */
+console.log(removeSmallest([1, 2, 3, 4, 5]), [2, 3, 4, 5]);
+console.log(removeSmallest([5, 3, 2, 1, 4]), [5, 3, 2, 4]);
+console.log(removeSmallest([2, 2, 1, 2, 1]), [2, 2, 2, 1]);
+console.log(removeSmallest([]), []);
+console.log(`\n 160 uzdv................`);
