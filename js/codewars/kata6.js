@@ -393,3 +393,11 @@ console.log(duplicateCount("aabBcde"));
 console.log(duplicateCount("Indivisibility"))
 console.log(duplicateCount("Indivisibilities"));
 console.log(`\n 157 uzdv..............`);
+
+// https://www.codewars.com/kata/56e2f59fb2ed128081001328/train/javascript
+function printArray(array) {
+    return array.toString();
+}
+console.log(printArray([2, 4, 5, 2]));
+console.log(printArray(['a', 'l', 'o', 'h', 'a']));
+console.log(`\n 158 uzdv...........`);
