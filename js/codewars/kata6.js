@@ -360,3 +360,36 @@ console.log(factorial(4), 24);
 console.log(factorial(7), 5040);
 console.log(factorial(17), 355687428096000);
 console.log(`\n 156 uzdv................`);
+
+// https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/javascript
+function duplicateCount(text) {
+    const arr = text.toLowerCase();
+    let count = 0;
+    let obj = {};
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++;
+        } else {
+            obj[arr[i]] = 1;
+        }
+    }
+    for (let i in obj) {
+        if (obj[i] > 1) {
+            count++;
+        }
+    }
+    return count;
+}
+// kitas budas
+/*function duplicateCount(text){
+  return text.toLowerCase().split('').filter(function(val, i, arr){
+    return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+  }).length;
+} */
+console.log(duplicateCount(""));
+console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabbcde"));
+console.log(duplicateCount("aabBcde"));
+console.log(duplicateCount("Indivisibility"))
+console.log(duplicateCount("Indivisibilities"));
+console.log(`\n 157 uzdv..............`);
