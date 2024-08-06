@@ -443,3 +443,21 @@ console.log(removeSmallest([5, 3, 2, 1, 4]), [5, 3, 2, 4]);
 console.log(removeSmallest([2, 2, 1, 2, 1]), [2, 2, 2, 1]);
 console.log(removeSmallest([]), []);
 console.log(`\n 160 uzdv................`);
+
+// https://www.codewars.com/kata/5663f5305102699bad000056/train/javascript
+function mxdiflg(a1, a2) {
+    if (a1.length === 0 || a2.length === 0) {
+        return -1;
+    }
+    let l1 = a1.map(str => str.length);
+    let l2 = a2.map(str => str.length);
+    return Math.max(Math.max(...l1) - Math.min(...l2), Math.max(...l2) - Math.min(...l1));
+}
+// kitas budas
+/* function mxdiflg(a1, a2) {
+    if(!a1.length||!a2.length)return -1;
+    a1.sort((a,b)=>a.length-b.length);
+    a2.sort((a,b)=>a.length-b.length)
+    return Math.max(Math.abs(a1[0].length-a2[a2.length-1].length),Math.abs(a2[0].length-a1[a1.length-1].length));
+}*/
+console.log(mxdiflg(["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"], ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]));
