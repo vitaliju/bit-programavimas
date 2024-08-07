@@ -77,3 +77,23 @@ function sumOfMinimums(arr) {
 console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]), 9);
 console.log(sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]), 76);
 console.log(`\n 165 uzdv...........`);
+
+// https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/javascript
+function findNb(m) {
+    let sum = 0;
+    while (m > 0) {
+        sum++;
+        const cubes = Math.pow(sum, 3);
+        m = m - cubes;
+    }
+    if (Math.sign(m) === -1) {
+        return (-1);
+    }
+    return sum;
+}
+console.log(findNb(4183059834009), 2022);
+console.log(findNb(24723578342962), -1);
+console.log(findNb(135440716410000), 4824);
+console.log(findNb(40539911473216), 3568);
+console.log(`\n 166 uzdv.............`);
+
