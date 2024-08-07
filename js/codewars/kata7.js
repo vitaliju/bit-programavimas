@@ -51,3 +51,29 @@ console.log(encryptThis("The less he spoke the more he heard"), "--> 84eh 108sse
 console.log(encryptThis("Why can we not all be like that wise old bird"), "--> 87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri");
 console.log(encryptThis("Thank you Piotr for all your help"), "--> 84kanh 121uo 80roti 102ro 97ll 121ruo 104ple");
 console.log(`\n 163 uzdv..................`);
+
+// https://www.codewars.com/kata/59fca81a5712f9fa4700159a/train/javascript
+function toBinary(n) {
+    return Number(n.toString(2));
+}
+console.log(toBinary(1), 1);
+console.log(toBinary(2), 10);
+console.log(toBinary(3), 11);
+console.log(toBinary(5), 101);
+console.log(`\n 164 uzdv.............`);
+
+// https://www.codewars.com/kata/5d5ee4c35162d9001af7d699/train/javascript
+function sumOfMinimums(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += Math.min(...arr[i]);
+    }
+    return sum;
+}
+// kitas budas
+/*function sumOfMinimums(arr) {
+  return arr.reduce((a, b) => a + Math.min(...b), 0);
+} */
+console.log(sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]), 9);
+console.log(sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]), 76);
+console.log(`\n 165 uzdv...........`);
