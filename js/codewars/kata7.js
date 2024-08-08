@@ -122,8 +122,16 @@ console.log(`\n 168 uzdv..........`);
 
 // https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/javascript
 function rowSumOddNumbers(n) {
-
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = n ** 3;
+    }
+    return sum;
 }
+// kitas budas
+/* function rowSumOddNumbers(n) {
+  return Math.pow(n, 3);
+}*/
 console.log(rowSumOddNumbers(1), 1);
 console.log(rowSumOddNumbers(42), 74088);
 console.log(`\n 169 uzdv.................`);
