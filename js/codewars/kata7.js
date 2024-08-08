@@ -104,5 +104,10 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
     let result = Math.sqrt(count) / 2;
     return Math.floor(result);
 }
+// kitas budas
+/*function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+  let arr = [age1, age2, age3, age4, age5, age6, age7, age8]
+  return Math.floor(Math.sqrt(arr.map(a => a * a).reduce((b,c) => b + c)) / 2)
+} */
 console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45), 86);
 console.log(`\n 167 uzdv............`);
