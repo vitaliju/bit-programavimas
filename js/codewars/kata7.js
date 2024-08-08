@@ -111,3 +111,19 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
 } */
 console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45), 86);
 console.log(`\n 167 uzdv............`);
+
+//https://www.codewars.com/kata/55d277882e139d0b6000005d/javascript
+const findAverage = function (nums) {
+    return nums.reduce((a, b) => a + b) / nums.length;
+}
+console.log(findAverage([1]), 1);
+console.log(findAverage([1, 3, 5, 7]), 4);
+console.log(`\n 168 uzdv..........`);
+
+// https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/javascript
+function rowSumOddNumbers(n) {
+
+}
+console.log(rowSumOddNumbers(1), 1);
+console.log(rowSumOddNumbers(42), 74088);
+console.log(`\n 169 uzdv.................`);
