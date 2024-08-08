@@ -135,3 +135,12 @@ function rowSumOddNumbers(n) {
 console.log(rowSumOddNumbers(1), 1);
 console.log(rowSumOddNumbers(42), 74088);
 console.log(`\n 169 uzdv.................`);
+
+// https://www.codewars.com/kata/5748838ce2fab90b86001b1a/train/javascript
+function squareArea(A) {
+    return Number(Math.pow((A * 2) / Math.PI, 2).toFixed(2));
+}
+console.log(squareArea(2), 1.62);
+console.log(squareArea(0), 0);
+console.log(squareArea(14.05), 80);
+console.log(`\n 170 uzdv.............`);
