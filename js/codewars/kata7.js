@@ -97,3 +97,12 @@ console.log(findNb(135440716410000), 4824);
 console.log(findNb(40539911473216), 3568);
 console.log(`\n 166 uzdv.............`);
 
+// https://www.codewars.com/kata/5aff237c578a14752d0035ae/train/javascript
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+    let count = (age1 * age1) + (age2 * age2) + (age3 * age3) +
+        (age4 * age4) + (age5 * age5) + (age6 * age6) + (age7 * age7) + (age8 * age8);
+    let result = Math.sqrt(count) / 2;
+    return Math.floor(result);
+}
+console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45), 86);
+console.log(`\n 167 uzdv............`);
