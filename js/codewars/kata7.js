@@ -144,3 +144,54 @@ console.log(squareArea(2), 1.62);
 console.log(squareArea(0), 0);
 console.log(squareArea(14.05), 80);
 console.log(`\n 170 uzdv.............`);
+
+// https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/javascript
+function towerBuilder(nFloors) {
+    let arr = [];
+    for (let i = 0; i < nFloors; i++) {
+        arr.push(' '.repeat(nFloors - i - 1) +
+            '*'.repeat((i * 2) + 1) +
+            ' '.repeat(nFloors - i - 1));
+    }
+    return arr;
+}
+console.log(towerBuilder(1), ["*"]);
+console.log(towerBuilder(2), [" * ", "***"]);
+console.log(towerBuilder(3), ["  *  ", " *** ", "*****"]);
+console.log(`\n 171 uzdv..................`);
+
+// https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
+const min = function (list) {
+
+    return Math.min(...list);
+}
+
+const max = function (list) {
+
+    return Math.max(...list);
+}
+// kitas budas
+/*const min = function(list){
+    list.sort((a, b) => (a - b));
+    return list[0];
+}
+
+const max = function(list){
+    list.sort((a, b) => (b - a));
+    return list[0];
+} */
+console.log(min([-52, 56, 30, 29, -54, 0, -110]), -110);
+console.log(min([42, 54, 65, 87, 0]), 0);
+console.log(max([4, 6, 2, 1, 9, 63, -134, 566]), 566);
+console.log(max([5]), 5);
+console.log(`\n 172 uzdv..........`);
+
+// https://www.codewars.com/kata/57e3f79c9cb119374600046b/train/javascript
+function hello(name) {
+    return `Hello, ${name ? name[0].toUpperCase() + name.slice(1).toLowerCase()
+        : 'World'}!`;
+}
+console.log(hello('aliCe'), 'Hello, Alice!');
+console.log(hello(), 'Hello, World!');
+console.log(hello(''), 'Hello, World!');
+console.log(`\n 173 uzdv...................`);
