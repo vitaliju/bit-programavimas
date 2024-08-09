@@ -82,3 +82,24 @@ console.log(array('1,2,3,4'), '2 3');
 console.log(array('A1,B2,C3,D4,E5'), 'B2 C3 D4');
 console.log(array('A,1,23,456,78,9,Z'), '1 23 456 78 9');
 console.log(`\n 184 uzdv...................`);
+
+// https://www.codewars.com/kata/5a805d8cafa10f8b930005ba/train/javascript
+function nearestSq(n) {
+    return Math.pow(Math.round(Math.sqrt(n)), 2);
+}
+// kitas budas
+/*function nearestSq(n) {
+    if (n === 1) {
+        return n
+    }
+    let z = Math.sqrt(n)
+    let res = Math.round(z)
+    let result = res * res
+    return result
+}*/
+console.log(nearestSq(1), 1, "nearestSq(1) = 1");
+console.log(nearestSq(2), 1, "nearestSq(2) = 1");
+console.log(nearestSq(10), 9, "nearestSq(10) = 9");
+console.log(nearestSq(111), 121, "nearestSq(111) = 121");
+console.log(nearestSq(9999), 10000, "nearestSq(9999) = 10000");
+console.log(`\n 185 uzdv.................`);
