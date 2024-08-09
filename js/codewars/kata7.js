@@ -195,3 +195,21 @@ console.log(hello('aliCe'), 'Hello, Alice!');
 console.log(hello(), 'Hello, World!');
 console.log(hello(''), 'Hello, World!');
 console.log(`\n 173 uzdv...................`);
+
+// https://www.codewars.com/kata/57e76bc428d6fbc2d500036d/javascript
+function stringToArray(string) {
+    return string.split(' ');
+}
+console.log(stringToArray("Robin Singh"), ["Robin", "Singh"]);
+console.log(stringToArray("I love arrays they are my favorite"));
+console.log(`\n 174 uzdv..............`);
+
+// https://www.codewars.com/kata/5a03b3f6a1c9040084001765/train/javascript
+function angle(n) {
+    return (n - 2) * 180;
+}
+console.log(angle(3), 180);
+console.log(angle(4), 360);
+console.log(`\n 175 uzdv....................`);
+
+//https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/javascript
