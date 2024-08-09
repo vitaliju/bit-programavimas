@@ -222,3 +222,26 @@ console.log(solution([]), []);
 console.log(solution([20, 2, 10]), [2, 10, 20]);
 console.log(solution([2, 20, 10]), [2, 10, 20]);
 console.log(`\n 176 uzdv......................`);
+
+// https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/javascript
+function removeUrlAnchor(url) {
+    return url.replace(/#.*/, '');
+}
+// kitas budas
+/*function removeUrlAnchor(url){
+  return url.split('#')[0];
+} */
+/*function removeUrlAnchor(url){
+  let string = ""
+  for(let i = 0; i < url.length; i++){
+    if(url[i] === "#") {
+     break; 
+    }
+    string += url[i]
+  }
+  return string 
+} */
+console.log(removeUrlAnchor('www.codewars.com#about'), 'www.codewars.com');
+console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'), 'www.codewars.com/katas/?page=1');
+console.log(removeUrlAnchor('www.codewars.com/katas/'), 'www.codewars.com/katas/');
+console.log(`\n 177 uzdv.....................`);
