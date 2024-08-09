@@ -37,3 +37,25 @@ console.log(minValue([1, 9, 1, 3, 7, 4, 6, 6, 7]), 134679);
 console.log(minValue([3, 6, 5, 5, 9, 8, 7, 6, 3, 5, 9]), 356789);
 console.log(minValue([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]), 1);
 console.log(`\n 182 uzdv................`);
+
+//https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/javascript
+function longestConsec(strarr, k) {
+    let longest = '';
+    for (let i = 0; i <= strarr.length - k; i++) {
+        let str = strarr.slice(i, i + k).join('');
+        if (str.length > longest.length) {
+            longest = str;
+        }
+    }
+    return k > 0 ? longest : '';
+}
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2), "abigailtheta");
+console.log(longestConsec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1), "oocccffuucccjjjkkkjyyyeehh");
+console.log(longestConsec([], 3), "");
+console.log(longestConsec(["itvayloxrp", "wkppqsztdkmvcuwvereiupccauycnjutlv", "vweqilsfytihvrzlaodfixoyxvyuyvgpck"], 2), "wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck");
+console.log(longestConsec(["wlwsasphmxx", "owiaxujylentrklctozmymu", "wpgozvxxiu"], 2), "wlwsasphmxxowiaxujylentrklctozmymu");
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], -2), "");
+console.log(longestConsec(["it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"], 3), "ixoyx3452zzzzzzzzzzzz");
+console.log(longestConsec(["it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"], 15), "");
+console.log(longestConsec(["it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"], 0), "");
+console.log(`\n 183 uzdv.................`);
