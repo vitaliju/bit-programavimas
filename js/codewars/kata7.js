@@ -257,3 +257,15 @@ console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
 console.log(sayHello(['Franklin', 'Delano', 'Roosevelt'], 'Chicago', 'Illinois'));
 console.log(sayHello(['Wallace', 'Russel', 'Osbourne'], 'Albany', 'New York'));
 console.log(`\n 178 uzdv..................`);
+
+//https://www.codewars.com/kata/565f5825379664a26b00007c/train/javascript
+function getSize(width, height, depth) {
+    const area = 2 * (depth * height + depth * width + width * height);
+    const volume = depth * width * height;
+    return [area, volume];
+}
+console.log(getSize(4, 2, 6), [88, 48]);
+console.log(getSize(10, 10, 10), [600, 1000]);
+console.log(getSize(4, 2, 6)[0], 88);
+console.log(getSize(4, 2, 6)[1], 48);
+console.log(`\n 179 uzdv.............`);
