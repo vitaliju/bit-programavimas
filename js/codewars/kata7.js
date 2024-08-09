@@ -245,3 +245,15 @@ console.log(removeUrlAnchor('www.codewars.com#about'), 'www.codewars.com');
 console.log(removeUrlAnchor('www.codewars.com/katas/?page=1#about'), 'www.codewars.com/katas/?page=1');
 console.log(removeUrlAnchor('www.codewars.com/katas/'), 'www.codewars.com/katas/');
 console.log(`\n 177 uzdv.....................`);
+
+// https://www.codewars.com/kata/5302d846be2a9189af0001e4/train/javascript
+function sayHello(name, city, state) {
+    return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
+}
+// kitas budas
+/*const sayHello = ( name, city, state ) => 
+    `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;*/
+console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'));
+console.log(sayHello(['Franklin', 'Delano', 'Roosevelt'], 'Chicago', 'Illinois'));
+console.log(sayHello(['Wallace', 'Russel', 'Osbourne'], 'Albany', 'New York'));
+console.log(`\n 178 uzdv..................`);
