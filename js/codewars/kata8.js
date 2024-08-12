@@ -103,3 +103,11 @@ console.log(nearestSq(10), 9, "nearestSq(10) = 9");
 console.log(nearestSq(111), 121, "nearestSq(111) = 121");
 console.log(nearestSq(9999), 10000, "nearestSq(9999) = 10000");
 console.log(`\n 185 uzdv.................`);
+
+// https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce/train/javascript
+function noOdds(values) {
+    return values.filter(n => n % 2 === 0);
+}
+console.log(noOdds([0, 1]), [0]);
+console.log(noOdds([0, 1, 2, 3]), [0, 2]);
+console.log(`\n 186 uzdv................`);
