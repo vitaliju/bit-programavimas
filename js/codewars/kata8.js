@@ -111,3 +111,14 @@ function noOdds(values) {
 console.log(noOdds([0, 1]), [0]);
 console.log(noOdds([0, 1, 2, 3]), [0, 2]);
 console.log(`\n 186 uzdv................`);
+
+// https://www.codewars.com/kata/556196a6091a7e7f58000018/train/javascript
+function largestPairSum(numbers) {
+    const result = numbers.sort((a, b) => b - a);
+    return result[0] + result[1];
+}
+console.log(largestPairSum([10, 14, 2, 23, 19]));
+console.log(largestPairSum([-100, -29, -24, -19, 19]));
+console.log(largestPairSum([1, 2, 3, 4, 6, -1, 2]));
+console.log(largestPairSum([-10, -8, -16, -18, -19]));
+console.log(`\n 187 uzdv...........`);
