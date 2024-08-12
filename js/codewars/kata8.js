@@ -122,3 +122,12 @@ console.log(largestPairSum([-100, -29, -24, -19, 19]));
 console.log(largestPairSum([1, 2, 3, 4, 6, -1, 2]));
 console.log(largestPairSum([-10, -8, -16, -18, -19]));
 console.log(`\n 187 uzdv...........`);
+
+//https://www.codewars.com/kata/559590633066759614000063/train/javascript
+function minMax(arr) {
+    return [Math.min(...arr), Math.max(...arr)];
+}
+console.log(minMax([1, 2, 3, 4, 5]));
+console.log(minMax([2334454, 5]));
+console.log(minMax([5]));
+console.log(`\n 188 uzdv..............`);
