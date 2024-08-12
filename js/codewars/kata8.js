@@ -140,3 +140,15 @@ console.log(findAverage([1, 1, 1]), 1);
 console.log(findAverage([1, 2, 3]), 2);
 console.log(findAverage([1, 2, 3, 4]), 2.5);
 console.log(`\ 189 uzdv...........`);
+
+// https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train/javascript
+function isAnagram(test, original) {
+    return test.toLowerCase().split('').sort().join('') ===
+        original.toLowerCase().split('').sort().join('');
+}
+console.log(isAnagram("foefet", "toffee"), true);
+console.log(isAnagram("Buckethead", "DeathCubeK"), true);
+console.log(isAnagram("Twoo", "WooT"), true);
+console.log(isAnagram("dumble", "bumble"), false);
+console.log(isAnagram("ound", "round"), false);
+console.log(isAnagram("apple", "pale"), false);
