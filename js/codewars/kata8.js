@@ -174,3 +174,18 @@ console.log(count('ab'), { 'a': 1, 'b': 1 });
 console.log(count('aba'), { 'a': 2, 'b': 1 });
 console.log(count('ABC'), { 'A': 1, 'B': 1, 'C': 1 });
 console.log(`\n 190 uzdv..............`);
+
+//https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/javascript
+function multiplicationTable(size) {
+    let y = [];
+    for (let i = 1; i <= size; i++) {
+        let x = [];
+        for (let j = 1; j <= size; j++) {
+            x.push(i * j);
+        }
+        y.push(x);
+    }
+    return y;
+}
+console.log(multiplicationTable(3), [[1, 2, 3], [2, 4, 6], [3, 6, 9]]);
+console.log(`\n 191 uzdv..............`);
