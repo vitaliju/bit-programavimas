@@ -189,3 +189,26 @@ function multiplicationTable(size) {
 }
 console.log(multiplicationTable(3), [[1, 2, 3], [2, 4, 6], [3, 6, 9]]);
 console.log(`\n 191 uzdv..............`);
+
+// https://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript
+function gimme(triplet) {
+    return [...triplet].indexOf(triplet.sort((a, b) => a - b)[1]);
+}
+// kitas budas
+/*const gimme = function (triplet) {
+  let index = 0;
+  let max = Math.max(...triplet);
+  let min = Math.min(...triplet);
+  for(let i = 0; i < triplet.length; i++){
+    if(triplet[i] !== max && triplet[i] !== min){        
+      index = i;
+    }
+  }
+  return index;
+}; */
+console.log(gimme([2, 3, 1]), 0);
+console.log(gimme([2.1, 3.2, 1.4]), 0);
+console.log(gimme([5.9, 10.4, 14.2]), 1);
+console.log(gimme([-5, -10, -14]), 1);
+console.log(gimme([-2, -3.2, 1]), 0);
+console.log(`\n 192 uzdv................`);
