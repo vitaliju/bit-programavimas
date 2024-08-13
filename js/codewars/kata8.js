@@ -152,3 +152,25 @@ console.log(isAnagram("Twoo", "WooT"), true);
 console.log(isAnagram("dumble", "bumble"), false);
 console.log(isAnagram("ound", "round"), false);
 console.log(isAnagram("apple", "pale"), false);
+
+// https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
+function count(string) {
+    let sum = {};
+    const str = string.split('').map(i => sum[i] = sum[i] + 1 || 1);
+    return sum;
+}
+// kitas budas
+/*unction count (string) {  
+  let result = {};
+  for(let i = 0; i < string.length; i++) {
+    result[string[i]] = result[string[i]] + 1 || 1;
+  }
+
+return result;
+} */
+console.log(count(''), {});
+console.log(count('a'), { 'a': 1 });
+console.log(count('ab'), { 'a': 1, 'b': 1 });
+console.log(count('aba'), { 'a': 2, 'b': 1 });
+console.log(count('ABC'), { 'A': 1, 'B': 1, 'C': 1 });
+console.log(`\n 190 uzdv..............`);
