@@ -291,3 +291,21 @@ console.log(rps('rock', 'rock'), 'Draw!');
 console.log(rps('scissors', 'scissors'), 'Draw!');
 console.log(rps('paper', 'paper'), 'Draw!');
 console.log(`\n 195 uzdv.............`);
+
+// https://www.codewars.com/kata/5680781b6b7c2be860000036/train/javascript
+function vowelIndices(word) {
+    let arr = [];
+    let str = word.split('');
+    for (let i = 0; i < str.length; i++) {
+        if (/[aeuoiy]/gi.test(str[i])) {
+            arr.push(i + 1);
+        }
+    }
+    return arr;
+}
+console.log(vowelIndices("mmm"), []);
+console.log(vowelIndices("apple"), [1, 5]);
+console.log(vowelIndices("super"), [2, 4]);
+console.log(vowelIndices("orange"), [1, 3, 6]);
+console.log(vowelIndices("supercalifragilisticexpialidocious"));
+console.log(`\n 196 uzdv......................`);
