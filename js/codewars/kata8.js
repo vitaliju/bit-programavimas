@@ -389,3 +389,45 @@ console.log(lowercaseCount(""), 0)
 console.log(lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"), 0)
 console.log(lowercaseCount("abcdefghijklmnopqrstuvwxyz"), 26);
 console.log(`\n 200 uzdv...................`);
+
+// https://www.codewars.com/kata/56e9e4f516bcaa8d4f001763/train/javascript
+const SequenceSum = (function () {
+    function SequenceSum() { }
+
+    SequenceSum.showSequence = function (count) {
+        let arr = [];
+        for (let i = 0; i <= count; i++) {
+            arr.push(i);
+        }
+        let b = arr.reduce((total, next) => total + next, 0);
+        let a = arr.join('+');
+        if (count < 0) {
+            return `${count}<0`;
+        }
+        if (count == 0) {
+            return `${count}=0`;
+        }
+        return `${a} = ${b}`
+    };
+
+    return SequenceSum;
+
+})();
+console.log(SequenceSum.showSequence(6), "0+1+2+3+4+5+6 = 21");
+console.log(`\n 201 uzdv...............`);
+
+// https://www.codewars.com/kata/5761a717780f8950ce001473/train/javascript
+function calculateAge() {
+
+}
+console.log(calculateAge(2012, 2016), "You are 4 years old.");
+console.log(calculateAge(1989, 2016), "You are 27 years old.");
+console.log(calculateAge(2000, 2090), "You are 90 years old.");
+console.log(calculateAge(2000, 1990), "You will be born in 10 years.");
+console.log(calculateAge(3400, 3400), "You were born this very year!");
+console.log(calculateAge(900, 2900), "You are 2000 years old.");
+console.log(calculateAge(2010, 1990), "You will be born in 20 years.");
+console.log(calculateAge(2010, 1500), "You will be born in 510 years.");
+console.log(calculateAge(2011, 2012), "You are 1 year old.");
+console.log(calculateAge(2000, 1999), "You will be born in 1 year.");
+console.log(`\n 202 uzdv...................`);
