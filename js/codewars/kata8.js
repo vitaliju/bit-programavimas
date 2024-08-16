@@ -353,3 +353,17 @@ console.log(wordsToMarks("family"), 66);
 console.log(wordsToMarks("selfness"), 99);
 console.log(wordsToMarks("knowledge"), 96);
 console.log(`\n 198 uzdv................`);
+
+// https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/javascript
+function meeting(s) {
+    return s.replace(/;/gi, ' ').split(' ').map(v => v.split(':').reverse()
+        .join(', ').toUpperCase()).sort().map(v => '(' + v + ')').join('');
+}
+// kitas budas
+/*function meeting(s) {
+    return s = s.toUpperCase().split(';').map(name => name.split(':')).map(name => name.reverse()).sort().reduce((acc, name) => acc + `(${name[0]}, ${name[1]})`, '')
+} */
+console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Meta;Ann:Arno;Madison:STAN;Alex:Cornwell;Lewis:Kern;Megan:Stan;Alex:Korn"));
+console.log(meeting("John:Gates;Michael:Wahl;Megan:Bell;Paul:Dorries;James:Dorny;Lewis:Steve;Alex:Meta;Elizabeth:Russel;Anna:Korn;Ann:Kern;Amber:Cornwell"));
+console.log(meeting("Alex:Arno;Alissa:Cornwell;Sarah:Bell;Andrew:Dorries;Ann:Kern;Haley:Arno;Paul:Dorny;Madison:Kern"));
+console.log(`\n 199 uzdv...................`);
