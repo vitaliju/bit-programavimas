@@ -367,3 +367,25 @@ console.log(meeting("Alexis:Wahl;John:Bell;Victoria:Schwarz;Abba:Dorny;Grace:Met
 console.log(meeting("John:Gates;Michael:Wahl;Megan:Bell;Paul:Dorries;James:Dorny;Lewis:Steve;Alex:Meta;Elizabeth:Russel;Anna:Korn;Ann:Kern;Amber:Cornwell"));
 console.log(meeting("Alex:Arno;Alissa:Cornwell;Sarah:Bell;Andrew:Dorries;Ann:Kern;Haley:Arno;Paul:Dorny;Madison:Kern"));
 console.log(`\n 199 uzdv...................`);
+
+// https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript
+function lowercaseCount(str) {
+    let count = 0;
+    for (const char of str) {
+        if (char.match(/[a-z]/)) {
+            count++;
+        }
+    }
+    return count;
+}
+// kitas budas
+/*function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+} */
+console.log(lowercaseCount("abc"), 3);
+console.log(lowercaseCount("abcABC123"), 3);
+console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"), 3);
+console.log(lowercaseCount(""), 0)
+console.log(lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"), 0)
+console.log(lowercaseCount("abcdefghijklmnopqrstuvwxyz"), 26);
+console.log(`\n 200 uzdv...................`);
