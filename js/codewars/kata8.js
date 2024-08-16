@@ -309,3 +309,30 @@ console.log(vowelIndices("super"), [2, 4]);
 console.log(vowelIndices("orange"), [1, 3, 6]);
 console.log(vowelIndices("supercalifragilisticexpialidocious"));
 console.log(`\n 196 uzdv......................`);
+
+// https://www.codewars.com/kata/57e1e61ba396b3727c000251/train/javascript
+function stringClean(s) {
+    return s.replaceAll(/[0-9]/g, '');
+}
+// kitas budas
+/*function stringClean(s){
+  let string = ''
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] != Number(s[i]) || (s[i] == ' ')) {
+      string += s[i]
+    }
+  }
+  return string
+} */
+console.log(stringClean(""), "");
+console.log(stringClean("! !"), "! !");
+console.log(stringClean("123456789"), "");
+console.log(stringClean("(E3at m2e2!!)"), "(Eat me!!)");
+console.log(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!"));
+console.log(stringClean("A1 A1! AAA   3J4K5L@!!!"));
+console.log(stringClean("Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@"));
+console.log(stringClean("Ad2dsad3ds21 A  1$$s122ad! A2A3Ae24 f44K5L@222222 "));
+console.log(stringClean("33333Ad2dsad3ds21 A3333  1$$s122a!d! A2!A!3Ae$24 f2##222 "));
+console.log(stringClean("My \"me3ssy\" d8ata issues2! Will1 th4ey ever, e3ver be3 so0lved?"));
+console.log(stringClean("Wh7y can't we3 bu1y the goo0d software3? #cheapskates3"));
+console.log(`\n 197 uzdv....................`);
