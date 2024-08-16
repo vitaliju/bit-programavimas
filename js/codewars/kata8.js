@@ -336,3 +336,20 @@ console.log(stringClean("33333Ad2dsad3ds21 A3333  1$$s122a!d! A2!A!3Ae$24 f2##22
 console.log(stringClean("My \"me3ssy\" d8ata issues2! Will1 th4ey ever, e3ver be3 so0lved?"));
 console.log(stringClean("Wh7y can't we3 bu1y the goo0d software3? #cheapskates3"));
 console.log(`\n 197 uzdv....................`);
+
+// https://www.codewars.com/kata/59706036f6e5d1e22d000016/train/javascript
+function wordsToMarks(string) {
+    let sum = 0;
+    for (let i = 0; i < string.length; i++) {
+        sum += string.codePointAt(i) - 96;
+    }
+    return sum;
+}
+// kitas budas
+//const wordsToMarks = s => [...s].reduce((sum, c) => sum += c.charCodeAt() - 96, 0);
+console.log(wordsToMarks("attitude"), 100);
+console.log(wordsToMarks("friends"), 75);
+console.log(wordsToMarks("family"), 66);
+console.log(wordsToMarks("selfness"), 99);
+console.log(wordsToMarks("knowledge"), 96);
+console.log(`\n 198 uzdv................`);
