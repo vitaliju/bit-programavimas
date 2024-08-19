@@ -30,3 +30,30 @@ console.log(calculateAge(2010, 1500), "You will be born in 510 years.");
 console.log(calculateAge(2011, 2012), "You are 1 year old.");
 console.log(calculateAge(2000, 1999), "You will be born in 1 year.");
 console.log(`\n 202 uzdv...................`);
+
+// https://www.codewars.com/kata/535474308bb336c9980006f2/train/javascript
+const greet = function (name) {
+    return `Hello ${name.slice(0, 1).toUpperCase() + (name.slice(1).toLowerCase())}!`;
+};
+console.log(greet('riley'), 'Hello Riley!');
+console.log(`\n 203 uzdv............`);
+
+//https://www.codewars.com/kata/57e921d8b36340f1fd000059/train/javascript
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
+    if (dolphin) {
+        sharkSpeed /= 2;
+    }
+    return pontoonDistance / youSpeed < sharkDistance / sharkSpeed
+        ? 'Alive!' : 'Shark Bait!';
+}
+// kitas budas
+/*const shark = (pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) => {
+  let youTime = pontoonDistance / youSpeed
+  let sharkTime = sharkDistance / (dolphin ? sharkSpeed / 2 : sharkSpeed)
+  
+  return sharkTime < youTime ? 'Shark Bait!' : 'Alive!'
+} */
+console.log(shark(12, 50, 4, 8, true), "Alive!");
+console.log(shark(7, 55, 4, 16, true), "Alive!");
+console.log(shark(24, 0, 4, 8, true), "Shark Bait!");
+console.log(`\n 204 uzdv.................`);
