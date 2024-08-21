@@ -80,3 +80,25 @@ console.log(getEvenNumbers([12, 14, 15]), [12, 14]);
 console.log(getEvenNumbers([13, 15]), []);
 console.log(getEvenNumbers([1, 3, 9]), []);
 console.log(`\n 206 uzdv.................`);
+
+//https://www.codewars.com/kata/53697be005f803751e0015aa/train/javascript
+function encode(string) {
+    return string.replace(/a/g, 1)
+        .replace(/e/g, 2)
+        .replace(/i/g, 3)
+        .replace(/o/g, 4)
+        .replace(/u/g, 5);
+}
+
+function decode(string) {
+    return string.replace(/1/g, 'a')
+        .replace(/2/g, 'e')
+        .replace(/3/g, 'i')
+        .replace(/4/g, 'o')
+        .replace(/5/g, 'u');
+}
+console.log(encode('hello'), 'h2ll4');
+console.log(encode('How are you today?'), 'H4w 1r2 y45 t4d1y?');
+console.log(encode('This is an encoding test.'), 'Th3s 3s 1n 2nc4d3ng t2st.');
+console.log(decode('h2ll4'), 'hello');
+console.log(`\n 207 uzdv...................`);
