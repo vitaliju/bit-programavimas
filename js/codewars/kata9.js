@@ -69,3 +69,14 @@ console.log(remove("!Hi!"), "!Hi");
 console.log(remove("Hi! Hi!"), "Hi! Hi");
 console.log(remove("Hi"), "Hi");
 console.log(`\n 205 uzdv..........`);
+
+// https://www.codewars.com/kata/514a6336889283a3d2000001/train/javascript
+function getEvenNumbers(numbersArray) {
+    return numbersArray.filter(n => n % 2 === 0);
+}
+console.log(getEvenNumbers([1, 2, 3, 6, 8, 10]), [2, 6, 8, 10]);
+console.log(getEvenNumbers([1, 2]), [2]);
+console.log(getEvenNumbers([12, 14, 15]), [12, 14]);
+console.log(getEvenNumbers([13, 15]), []);
+console.log(getEvenNumbers([1, 3, 9]), []);
+console.log(`\n 206 uzdv.................`);
