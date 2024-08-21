@@ -57,3 +57,15 @@ console.log(shark(12, 50, 4, 8, true), "Alive!");
 console.log(shark(7, 55, 4, 16, true), "Alive!");
 console.log(shark(24, 0, 4, 8, true), "Shark Bait!");
 console.log(`\n 204 uzdv.................`);
+
+// https://www.codewars.com/kata/57faece99610ced690000165/javascript
+function remove(string) {
+    return string.replace(/!+$/, '');
+}
+console.log(remove("Hi!"), "Hi");
+console.log(remove("Hi!!!"), "Hi");
+console.log(remove("!Hi"), "!Hi");
+console.log(remove("!Hi!"), "!Hi");
+console.log(remove("Hi! Hi!"), "Hi! Hi");
+console.log(remove("Hi"), "Hi");
+console.log(`\n 205 uzdv..........`);
