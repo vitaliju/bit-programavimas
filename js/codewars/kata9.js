@@ -136,3 +136,19 @@ console.log(findNextSquare(15241383936), 15241630849);
 console.log(findNextSquare(155), -1);
 console.log(findNextSquare(342786627), -1);
 console.log(`\n 209 uzdv....................`);
+
+// https://www.codewars.com/kata/567bf4f7ee34510f69000032/train/javascript
+String.prototype.digit = function (n) {
+    return /^\d$/.test(this);
+};
+// kitas budas
+/*String.prototype.digit = function() {
+  return this.match(/^[0-9]$/) ? true : false;
+}; */
+console.log(''.digit(), false);
+console.log('7'.digit(), true);
+console.log(' '.digit(), false);
+console.log('a'.digit(), false);
+console.log('a5'.digit(), false);
+console.log('14'.digit(), false);
+console.log(`\n 210 uzdv..............`);
