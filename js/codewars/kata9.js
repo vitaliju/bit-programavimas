@@ -102,3 +102,37 @@ console.log(encode('How are you today?'), 'H4w 1r2 y45 t4d1y?');
 console.log(encode('This is an encoding test.'), 'Th3s 3s 1n 2nc4d3ng t2st.');
 console.log(decode('h2ll4'), 'hello');
 console.log(`\n 207 uzdv...................`);
+
+// https://www.codewars.com/kata/559f80b87fa8512e3e0000f5/javascript
+function odds(values) {
+    return values.filter(n => n % 2 !== 0);
+}
+console.log(odds([]), []);
+console.log(odds([2, 4, 6]), []);
+console.log(odds([1, 3, 5]), [1, 3, 5]);
+console.log(odds([1, 2, 3, 4, 5, 6]), [1, 3, 5]);
+console.log(`\n 208 uzdv..............`);
+
+//https://www.codewars.com/kata/56269eb78ad2e4ced1000013/train/javascript
+function findNextSquare(sq) {
+    let num = Math.sqrt(sq);
+    if (!Number.isInteger(num)) {
+        return -1;
+    }
+    return (num + 1) ** 2;
+}
+// kitas budas
+/*function findNextSquare(sq) {
+  let number = Math.sqrt(sq);
+  if(Math.round(number) === number) {
+    return Math.pow(number + 1, 2)
+  }
+  return -1;
+} */
+console.log(findNextSquare(121), 144);
+console.log(findNextSquare(625), 676);
+console.log(findNextSquare(319225), 320356);
+console.log(findNextSquare(15241383936), 15241630849);
+console.log(findNextSquare(155), -1);
+console.log(findNextSquare(342786627), -1);
+console.log(`\n 209 uzdv....................`);
