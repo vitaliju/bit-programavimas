@@ -302,3 +302,22 @@ console.log(divCon([9, 3, '7', '3']), 2);
 console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 14);
 console.log(divCon(['3', 6, 6, 0, '5', 8, 5, '6', 2, '0']), 13);
 console.log(`\n 215 uzdv....................`);
+
+// https://www.codewars.com/kata/580a4734d6df748060000045/train/javascript
+function isSortedAndHow(array) {
+    return array.every((x, i) => i === 0 || array[i] >= array[i - 1])
+        ? 'yes, ascending'
+        : array.every((x, i) => i === 0 || array[i] <= array[i - 1])
+            ? 'yes, descending' : 'no';
+}
+// kitas budas
+/*const isSortedAndHow = array => {
+  let ascending = array.filter((e, i, a) => e > a[i+1]).length == 0
+  let descending = array.filter((e, i, a) => e < a[i+1]).length == 0
+  
+  return ascending ? 'yes, ascending' : descending ? 'yes, descending' : 'no'
+} */
+console.log(isSortedAndHow([1, 2]), 'yes, ascending')
+console.log(isSortedAndHow([15, 7, 3, -8]), 'yes, descending')
+console.log(isSortedAndHow([4, 2, 30]), 'no')
+console.log(`\n 216 uzdv.....................`);
