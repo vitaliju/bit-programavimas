@@ -210,3 +210,36 @@ console.log(billboard("Paolo Oli"), 270);
 console.log(billboard("Hjalmar Liupold", 40), 600);
 console.log(billboard("Simon Eadwulf"), 390);
 console.log(`\n 212 uzdv...........`);
+
+https://www.codewars.com/kata/5c8bfa44b9d1192e1ebd3d15/train/javascript
+function warnTheSheep(queue) {
+    if (queue[queue.length - 1] === 'wolf') {
+        return 'Pls go away and stop eating my sheep';
+    } else {
+        let index = queue.findIndex((i) => i === 'wolf');
+        return `Oi! Sheep number ${queue.length - index - 1}! You are about to be eaten by a wolf!`;
+    }
+}
+// kitas budas
+//const warnTheSheep = (queue) => queue.reverse()[0] === 'wolf' 
+//? 'Pls go away and stop eating my sheep' 
+//: `Oi! Sheep number ${queue.indexOf('wolf')}! You are about to be eaten by a wolf!`; 
+console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]),
+    "Oi! Sheep number 2! You are about to be eaten by a wolf!"
+);
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]),
+    "Oi! Sheep number 5! You are about to be eaten by a wolf!"
+);
+console.log(warnTheSheep(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"]),
+    "Oi! Sheep number 6! You are about to be eaten by a wolf!"
+);
+console.log(warnTheSheep(["sheep", "wolf", "sheep"]),
+    "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+);
+console.log(warnTheSheep(["wolf"]),
+    "Pls go away and stop eating my sheep"
+);
+console.log(warnTheSheep(["sheep", "sheep", "wolf"]),
+    "Pls go away and stop eating my sheep"
+);
+console.log(`\n 213 uzdv.................`);
