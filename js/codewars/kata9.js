@@ -275,3 +275,30 @@ console.log(getDrinkByProfession("rapper"), "Cristal",);
 console.log(getDrinkByProfession("pundit"), "Beer");
 console.log(getDrinkByProfession("Pug"), "Beer");
 console.log(`\n 214 uzdv......................`);
+
+// https://www.codewars.com/kata/57eaec5608fed543d6000021/train/javascript
+function divCon(x) {
+
+    let numSum = 0;
+    let strSum = 0;
+    x.map(v => (typeof v === 'string' ? (strSum += v * 1) : (numSum += v)));
+    return numSum - strSum;
+}
+//kitas budas
+/*function divCon(x){
+  let numValue = 0;
+  let strValue = 0;
+  
+  for(let i = 0; i < x.length; i++) {
+    if(typeof(x[i]) === 'string' ) {
+      strValue += parseFloat(x[i]);
+    } else if(typeof(x[i]) === 'number' ) {
+      numValue += x[i];
+    }
+  }
+  return numValue - strValue;
+} */
+console.log(divCon([9, 3, '7', '3']), 2);
+console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]), 14);
+console.log(divCon(['3', 6, 6, 0, '5', 8, 5, '6', 2, '0']), 13);
+console.log(`\n 215 uzdv....................`);
