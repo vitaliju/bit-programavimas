@@ -243,3 +243,35 @@ console.log(warnTheSheep(["sheep", "sheep", "wolf"]),
     "Pls go away and stop eating my sheep"
 );
 console.log(`\n 213 uzdv.................`);
+
+// https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
+function getDrinkByProfession(param) {
+    const drink = param.toLowerCase();
+    return drink === 'jabroni' ? 'Patron Tequila'
+        : drink === 'school counselor' ? 'Anything with Alcohol'
+            : drink === 'programmer' ? 'Hipster Craft Beer'
+                : drink === 'bike gang member' ? 'Moonshine'
+                    : drink === 'politician' ? 'Your tax dollars'
+                        : drink === 'rapper' ? 'Cristal' : 'Beer';
+}
+// kitas budas
+/*function getDrinkByProfession(param){
+    const list = {
+    "jabroni": "Patron Tequila",
+    "school counselor": "Anything with Alcohol",
+    "programmer": "Hipster Craft Beer",
+    "bike gang member": "Moonshine",
+    "politician": "Your tax dollars",
+    "rapper": "Cristal"
+    }
+    return list[param.toLowerCase()]||"Beer";
+} */
+console.log(getDrinkByProfession("jabrOni"), "Patron Tequila");
+console.log(getDrinkByProfession("scHOOl counselor"), "Anything with Alcohol");
+console.log(getDrinkByProfession("prOgramMer"), "Hipster Craft Beer");
+console.log(getDrinkByProfession("bike ganG member"), "Moonshine",);
+console.log(getDrinkByProfession("poLiTiCian"), "Your tax dollars");
+console.log(getDrinkByProfession("rapper"), "Cristal",);
+console.log(getDrinkByProfession("pundit"), "Beer");
+console.log(getDrinkByProfession("Pug"), "Beer");
+console.log(`\n 214 uzdv......................`);
